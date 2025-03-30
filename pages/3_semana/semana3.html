@@ -4,233 +4,207 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Semana 3</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos -->
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/semanas.css" />
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
   </head>
-  <body>
-    <header>
-      <h1>Semana 3</h1>
-    </header>
-
-    <!-- Agregar al inicio del archivo de cada página -->
-    <div class="overlay"></div>
-    <div class="navbar-container">
-      <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="main-nav-li">
-            <a href="../../index.html"><strong>Inicio</strong></a>
-          </li>
-          <li class="main-nav-li">
-            <a href="../1_semana/semana1.html" class="toggle-week"
-              ><strong>&darr; Semana 1</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../1_semana/semana1.html">Ir a la Semana 1</a>
-              </li>
-              <li>
-                <a href="../1_semana/Puntos/01_intro.html"
-                  >XML - Historia, estructura y sintáxis</a
-                >
-              </li>
-              <li>
-                <a href="../1_semana/Puntos/02_etiquetas.html"
-                  >Etiquetas, instrucciones de procesamiento y referencia a
-                  entidades</a
-                >
-              </li>
-              <li>
-                <a href="../1_semana/Puntos/03_declaracion.html"
-                  >Declaración de tipos de documento</a
-                >
-              </li>
-              <li>
-                <a href="../1_semana/Puntos/01_ejercicios.html"
-                  >Ejercicios 01</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../2_semana/semana2.html" class="toggle-week"
-              ><strong>&darr; Semana 2</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../2_semana/semana2.html">Ir a la Semana 2</a>
-              </li>
-              <li>
-                <a href="../2_semana/Puntos/04_elaboracion.html"
-                  >Elaboración de documentos XML válidos y bien formados</a
-                >
-              </li>
-              <li>
-                <a href="../2_semana/Puntos/05_espacios.html">
-                  Uso de espacios de nombres en XML - definición, referencia y
-                  prefijos</a
-                >
-              </li>
-              <li>
-                <a href="../2_semana/Puntos/06_ventajas.html"
-                  >Ventajas de los espacios de nombres</a
-                >
-              </li>
-              <li>
-                <a href="../2_semana/Puntos/07_metodos.html"
-                  >Métodos de definición de documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../2_semana/Puntos/02_ejercicios.html"
-                  >Ejercicios 02</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="./semana3.html" class="toggle-week"
-              ><strong>&darr; Semana 3</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="./semana3.html">Ir a la Semana 3</a>
-              </li>
-              <li>
-                <a href="./Puntos/08_creacion.html"
-                  >Creación de descripciones y asociación con documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="./Puntos/09_validacion.html"
-                  >Validación - herramientas de creación y validación</a
-                >
-              </li>
-              <li>
-                <a href="./Puntos/10_extensibilidad.html"
-                  >Extensibilidad de los esquemas - tipos derivados y esquemas
-                  para múltiples documentos</a
-                >
-              </li>
-              <li>
-                <a href="./Puntos/11_documentacion.html"
-                  >Documentación de especificaciones</a
-                >
-              </li>
-              <li>
-                <a href="./Puntos/03_ejercicios.html">Ejercicios 03</a>
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../4_semana/semana4.html" class="toggle-week"
-              ><strong>&darr; Semana 4</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../4_semana/semana4.html">Ir a la Semana 4</a>
-              </li>
-              <li>
-                <a href="../4_semana/Puntos/12_yaml.html"
-                  >Otros lenguajes - YAML</a
-                >
-              </li>
-              <li>
-                <a href="../4_semana/Puntos/13_json.html"
-                  >Otros lenguajes - JSON</a
-                >
-              </li>
-              <li>
-                <a href="../4_semana/Puntos/14_markdown.html"
-                  >Otros lenguajes - Markdown</a
-                >
-              </li>
-              <li>
-                <a href="../4_semana/Puntos/04_ejercicios.html"
-                  >Ejercicios 04</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../formulario.html"><strong>Contacto</strong></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <section class="content">
-      <h2>Puntos principales de esta semana</h2>
-      <p>Recomendable ir en orden</p>
-
-      <div class="points">
-        <div class="point" id="punto8">
-          <h3>
-            <a href="./Puntos/08_creacion.html"
-              >Punto 08 - Creación de descripciones y asociación con documentos
-              XML</a
-            >
-          </h3>
-          <ul>
-            <li>Introducción a la Extensibilidad en XML Schema</li>
-            <li>Extensión de Tipos en XML Schema</li>
-            <li>Restricción de Tipos en XML Schema</li>
-            <li>Esquemas para Mútliples Documentos - Uso de include e import</li>
-            <li>Uso de redefine para Moificar Esquemas</li>
-          </ul>
-        </div>
-        <div class="point" id="punto9">
-          <h3>
-            <a href="./Puntos/09_validacion.html"
-              >Punto 09 - Validación - herramientas de creación y validación</a
-            >
-          </h3>
-          <ul>
-            <li>Introducción</li>
-            <li>Métodos de Validación</li>
-            <li>Validación con DTD (Document Type Definition)</li>
-            <li>Validación con XML Schema (XSD)</li>
-            <li>Validación con RELAX NG</li>
-            <li>Herramientas Indispensables para Validar</li>
-          </ul>
-        </div>
-        <div class="point" id="punto10">
-          <h3>
-            <a href="./Puntos/10_extensibilidad"
-              >Punto 10 - Extensibilidad de los esquemas - tipos derivados y
-              esquemas para múltiples documentos</a
-            >
-          </h3>
-          <ul>
-            <li>Introducción de la Descripción en XML</li>
-            <li>Validación con DTD</li>
-            <li>Validación con XSD</li>
-            <li>Asociación de XML con su Esquema</li>
-            <li>RDF y OWL - Metadatos en XML</li>
-          </ul>
-        </div>
-        <div class="point" id="punto11">
-          <h3>
-            <a href="./Puntos/11_documentacion.html"
-              >Punto 11 - Documentación de especificaciones</a
-            >
-          </h3>
-          <ul>
-            <li>¿Qué es la documentación de especificaciones?</li>
-            <li>Especificaciones fundamentales</li>
-            <li>Especificaciones para validación</li>
-            <li>Especificaciones para consultas y navegación</li>
-            <li>Especificaciones para validación</li>
-            <li>Especificaciones de aplicaciones</li>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../index.html">Curso XML</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html">Inicio</a>
+            </li>
+            
+            <!-- Semana 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
+                <li><a class="dropdown-item" href="../1_semana/semana1.html">Ir a la Semana 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../1_semana/Puntos/01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item" href="../1_semana/Puntos/02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item" href="../1_semana/Puntos/03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item" href="../1_semana/Puntos/01_ejercicios.html">Ejercicios 01</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
+                <li><a class="dropdown-item" href="../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos XML válidos</a></li>
+                <li><a class="dropdown-item" href="../2_semana/Puntos/05_espacios.html">Uso de espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="week3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 3
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
+                <li><a class="dropdown-item active" href="./semana3.html">Ir a la Semana 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item" href="./Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="./Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="./Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="./Puntos/03_ejercicios.html">Ejercicios 03</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 4
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week4Dropdown">
+                <li><a class="dropdown-item" href="../4_semana/semana4.html">Ir a la Semana 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../4_semana/Puntos/12_yaml.html">YAML</a></li>
+                <li><a class="dropdown-item" href="../4_semana/Puntos/13_json.html">JSON</a></li>
+                <li><a class="dropdown-item" href="../4_semana/Puntos/14_markdown.html">Markdown</a></li>
+                <li><a class="dropdown-item" href="../4_semana/Puntos/04_ejercicios.html">Ejercicios 04</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../formulario.html">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <footer>
-      <p>&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <header class="mt-5 pt-4">
+      <div class="container text-center py-4">
+        <h1 class="display-4 fw-bold">Semana 3</h1>
+        <p class="lead">Validación y extensibilidad de XML</p>
+      </div>
+    </header>
+
+    <main class="container my-4 flex-grow-1">
+      <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+        <h2 class="text-center mb-4">Puntos principales de esta semana</h2>
+        <p class="text-center mb-5 fs-5">Recomendable ir en orden</p>
+
+        <div class="row g-4">
+          <!-- Punto 8 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 point-card">
+              <div class="card-body">
+                <h3 class="card-title h5 text-center">
+                  <a href="./Puntos/08_creacion.html" class="text-decoration-none">Punto 08 - Creación de descripciones y asociaciones</a>
+                </h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Introducción a la Extensibilidad en XML Schema</li>
+                  <li class="mb-2">Extensión de Tipos en XML Schema</li>
+                  <li class="mb-2">Restricción de Tipos en XML Schema</li>
+                  <li class="mb-2">Esquemas para Mútliples Documentos</li>
+                  <li class="mb-2">Uso de redefine para Moificar Esquemas</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Punto 9 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 point-card">
+              <div class="card-body">
+                <h3 class="card-title h5 text-center">
+                  <a href="./Puntos/09_validacion.html" class="text-decoration-none">Punto 09 - Validación - herramientas</a>
+                </h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Introducción</li>
+                  <li class="mb-2">Métodos de Validación</li>
+                  <li class="mb-2">Validación con DTD</li>
+                  <li class="mb-2">Validación con XML Schema (XSD)</li>
+                  <li class="mb-2">Validación con RELAX NG</li>
+                  <li class="mb-2">Herramientas Indispensables</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Punto 10 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 point-card">
+              <div class="card-body">
+                <h3 class="card-title h5 text-center">
+                  <a href="./Puntos/10_extensibilidad.html" class="text-decoration-none">Punto 10 - Extensibilidad de los esquemas</a>
+                </h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Introducción de la Descripción en XML</li>
+                  <li class="mb-2">Validación con DTD</li>
+                  <li class="mb-2">Validación con XSD</li>
+                  <li class="mb-2">Asociación de XML con su Esquema</li>
+                  <li class="mb-2">RDF y OWL - Metadatos en XML</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Punto 11 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 point-card">
+              <div class="card-body">
+                <h3 class="card-title h5 text-center">
+                  <a href="./Puntos/11_documentacion.html" class="text-decoration-none">Punto 11 - Documentación de especificaciones</a>
+                </h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">¿Qué es la documentación de especificaciones?</li>
+                  <li class="mb-2">Especificaciones fundamentales</li>
+                  <li class="mb-2">Especificaciones para validación</li>
+                  <li class="mb-2">Especificaciones para consultas</li>
+                  <li class="mb-2">Especificaciones de aplicaciones</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Ejercicios -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 point-card">
+              <div class="card-body">
+                <h3 class="card-title h5 text-center">
+                  <a href="./Puntos/03_ejercicios.html" class="text-decoration-none">03 Ejercicios</a>
+                </h3>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2">Ejercicios para practicar los conceptos aprendidos esta semana</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-light py-3 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+      </div>
     </footer>
-    <script src="../../../js/navbar.js"></script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

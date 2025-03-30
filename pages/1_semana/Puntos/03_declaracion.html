@@ -3,334 +3,284 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Declaración de tipos de documento</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos -->
     <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
     <link rel="stylesheet" href="../../../css/main.css" />
     <link rel="stylesheet" href="../../../css/puntos.css" />
   </head>
-  <body>
-    <header>
-      <h1>03. Declaración de tipos de documento</h1>
-      <p>Semana 1</p>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../index.html">Inicio</a>
+            </li>
+            
+            <!-- Semana 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
+                <li><a class="dropdown-item" href="../semana1.html">Ir a la Semana 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../Puntos/01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item" href="../Puntos/02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item active" href="../Puntos/03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item" href="../Puntos/01_ejercicios.html">Ejercicios 01</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
+                <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacio de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 3
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
+                <li><a class="dropdown-item" href="../../3_semana/semana3.html">Ir a la Semana 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/03_ejercicios.html">Ejercicios 03</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 4
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week4Dropdown">
+                <li><a class="dropdown-item" href="../../4_semana/semana4.html">Ir a la Semana 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/12_yaml.html">YAML</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/13_json.html">JSON</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/14_markdown.html">Markdown</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/04_ejercicios.html">Ejercicios 04</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../formulario.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5 pt-4 text-center bg-gradient">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold">03. Declaración de tipos de documento</h1>
+        <p class="lead fs-3">Semana 1</p>
+      </div>
     </header>
 
-    <!-- Agregar al inicio del archivo de cada página -->
-    <div class="overlay"></div>
-    <div class="navbar-container">
-      <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="main-nav-li">
-            <a href="../../../index.html"><strong>Inicio</strong></a>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../1_semana/semana1.html" class="toggle-week"
-              ><strong>&darr; Semana 1</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../semana1.html">Ir a la Semana 1</a>
-              </li>
-              <li>
-                <a href="../Puntos/01_intro.html"
-                  >XML - Historia, estructura y sintáxis</a
-                >
-              </li>
-              <li>
-                <a href="../Puntos/02_etiquetas.html"
-                  >Etiquetas, instrucciones de procesamiento y referencia a
-                  entidades</a
-                >
-              </li>
-              <li>
-                <a href="../Puntos/03_declaracion.html"
-                  >Declaración de tipos de documento</a
-                >
-              </li>
-              <li><a href="../Puntos/01_ejercicios.html">Ejercicios 01</a></li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../2_semana/semana2.html" class="toggle-week"
-              ><strong>&darr; Semana 2</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../2_semana/semana2.html">Ir a la Semana 2</a>
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/04_elaboracion.html"
-                  >Elaboración de documentos XML válidos y bien formados</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/05_espacios.html">
-                  Uso de espacios de nombres en XML - definición, referencia y
-                  prefijos</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/06_ventajas.html"
-                  >Ventajas de los espacios de nombres</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/07_metodos.html"
-                  >Métodos de definición de documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/02_ejercicios.html"
-                  >Ejercicios 02</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../3_semana/semana3.html" class="toggle-week"
-              ><strong>&darr; Semana 3</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../3_semana/semana3.html">Ir a la Semana 3</a>
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/08_creacion.html"
-                  >Creación de descripciones y asociación con documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/09_validacion.html"
-                  >Validación - herramientas de creación y validación</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/10_extensibilidad.html"
-                  >Extensibilidad de los esquemas - tipos derivados y esquemas
-                  para múltiples documentos</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/11_documentacion.html"
-                  >Documentación de especificaciones</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/03_ejercicios.html"
-                  >Ejercicios 03</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../4_semana/semana4.html" class="toggle-week"
-              ><strong>&darr; Semana 4</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../4_semana/semana4.html">Ir a la Semana 4</a>
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/12_yaml.html"
-                  >Otros lenguajes - YAML</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/13_json.html"
-                  >Otros lenguajes - JSON</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/14_markdown.html"
-                  >Otros lenguajes - Markdown</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/04_ejercicios.html"
-                  >Ejercicios 04</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../formulario.html"><strong>Contacto</strong></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <main class="container my-4 flex-grow-1">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="sticky-top pt-3">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="h5">Secciones</h2>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#dtd">Declaración de Tipos de Documento (DTD)</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#doctype">Declaración DOCTYPE</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#standalone">Declaración Standalone</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#dtd-importancia">Importancia de los DTDs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <main>
-      <aside class="sidebar">
-        <nav class="nav-secundario">
-          <h2>Secciones</h2>
-          <ul>
-            <li><a href="#dtd">Declaración de Tipos de Documento (DTD)</a></li>
-            <li>
-              <a href="#doctype">Declaración DOCTYPE</a>
-            </li>
-            <li>
-              <a href="#standalone">Declaración Standalone</a>
-            </li>
-            <li><a href="#dtd-importancia">Importancia de los DTDs</a></li>
-          </ul>
-        </nav>
-      </aside>
+        <!-- Contenido principal -->
+        <div class="col-lg-9">
+          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+            <h2 class="text-center mb-4">Diferentes tipos</h2>
+            
+            <article id="dtd" class="mb-5">
+              <h2 class="h3">Declaración de Tipos de Documento (DTD)</h2>
+              <p>
+                Un <strong>DTD</strong> (Document Type Definition) es un conjunto de
+                reglas que define la estructura y elementos válidos de un documento
+                XML. Proporciona una gramática para una clase de documentos XML,
+                especificando:
+              </p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Qué elementos pueden aparecer en el documento</li>
+                <li class="list-group-item">Qué atributos pueden tener estos elementos</li>
+                <li class="list-group-item">Cómo se pueden anidar los elementos</li>
+                <li class="list-group-item">El orden de los elementos</li>
+                <li class="list-group-item">Si un elemento puede estar vacío</li>
+              </ul>
+            </article>
 
-      <section>
-        <h2 class="titulo-section">Diferentes tipos</h2>
-        <article id="dtd">
-          <h2>Declaración de Tipos de Documento (DTD)</h2>
-          <p>
-            Un <strong>DTD</strong> (Document Type Definition) es un conjunto de
-            reglas que define la estructura y elementos válidos de un documento
-            XML. Proporciona una gramática para una clase de documentos XML,
-            especificando:
-          </p>
-          <ul>
-            <li>Qué elementos pueden aparecer en el documento</li>
-            <li>Qué atributos pueden tener estos elementos</li>
-            <li>Cómo se pueden anidar los elementos</li>
-            <li>El orden de los elementos</li>
-            <li>Si un elemento puede estar vacío</li>
-          </ul>
-        </article>
+            <article id="doctype" class="mb-5">
+              <h2 class="h3">Declaración DOCTYPE</h2>
+              <p>
+                La declaración DOCTYPE se utiliza para asociar un documento XML con
+                su DTD. La sintaxis básica es:
+              </p>
 
-        <article id="doctype">
-          <h2>Declaración DOCTYPE</h2>
-          <p>
-            La declaración DOCTYPE se utiliza para asociar un documento XML con
-            su DTD. La sintaxis básica es:
-          </p>
+              <pre class="bg-light p-3"><code>&lt;!DOCTYPE nombre_raíz TIPO "URI_DTD"&gt;</code></pre>
 
-          <pre><code>&lt;!DOCTYPE nombre_raíz TIPO "URI_DTD"&gt;</code></pre>
+              <p>Donde:</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  <code>nombre_raíz</code>: Debe coincidir con el elemento raíz del
+                  documento XML
+                </li>
+                <li class="list-group-item"><code>TIPO</code>: Puede ser PUBLIC o SYSTEM</li>
+                <li class="list-group-item"><code>URI_DTD</code>: Ubicación del DTD</li>
+              </ul>
 
-          <p>Donde:</p>
-          <ul>
-            <li>
-              <code>nombre_raíz</code>: Debe coincidir con el elemento raíz del
-              documento XML
-            </li>
-            <li><code>TIPO</code>: Puede ser PUBLIC o SYSTEM</li>
-            <li><code>URI_DTD</code>: Ubicación del DTD</li>
-          </ul>
-
-          <h3>Ejemplo de DOCTYPE</h3>
-          <pre><code>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+              <h3 class="h4">Ejemplo de DOCTYPE</h3>
+              <pre class="bg-light p-3"><code>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
         &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd"&gt;</code></pre>
 
-          <p>Un DOCTYPE puede ser:</p>
-          <ul>
-            <li>
-              <strong>PUBLIC</strong>: Utiliza un identificador público y
-              opcionalmente una URL para localizar el DTD.
-            </li>
-            <li>
-              <strong>SYSTEM</strong>: Utiliza solo una URL para localizar el
-              DTD.
-            </li>
-          </ul>
+              <p>Un DOCTYPE puede ser:</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  <strong>PUBLIC</strong>: Utiliza un identificador público y
+                  opcionalmente una URL para localizar el DTD.
+                </li>
+                <li class="list-group-item">
+                  <strong>SYSTEM</strong>: Utiliza solo una URL para localizar el
+                  DTD.
+                </li>
+              </ul>
 
-          <p>El formato completo de la declaración es:</p>
-          <pre><code>&lt;!DOCTYPE nombre_raíz PUBLIC "ID-Público" "URI-DTD"&gt;
+              <p>El formato completo de la declaración es:</p>
+              <pre class="bg-light p-3"><code>&lt;!DOCTYPE nombre_raíz PUBLIC "ID-Público" "URI-DTD"&gt;
         &lt;!DOCTYPE nombre_raíz SYSTEM "URI-DTD"&gt;</code></pre>
-        </article>
+            </article>
 
-        <article id="standalone">
-          <h2>Declaración Standalone</h2>
-          <p>
-            La declaración <strong>Standalone</strong> en XML indica si el
-            documento depende de información externa (como un DTD) para ser
-            procesado correctamente.
-          </p>
+            <article id="standalone" class="mb-5">
+              <h2 class="h3">Declaración Standalone</h2>
+              <p>
+                La declaración <strong>Standalone</strong> en XML indica si el
+                documento depende de información externa (como un DTD) para ser
+                procesado correctamente.
+              </p>
 
-          <pre><code>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+              <pre class="bg-light p-3"><code>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
         &lt;!DOCTYPE s1 PUBLIC "http://www.ibm.com/example.dtd" "example.dtd"&gt;</code></pre>
 
-          <h3>Valores válidos para standalone</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Valor</th>
-                <th>Significado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>yes</code></td>
-                <td>
-                  El documento es independiente, no necesita referencias
-                  externas
-                </td>
-              </tr>
-              <tr>
-                <td><code>no</code></td>
-                <td>
-                  El documento depende de una DTD u otra información externa
-                </td>
-              </tr>
-            </tbody>
-          </table>
+              <h3 class="h4">Valores válidos para standalone</h3>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Valor</th>
+                    <th>Significado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>yes</code></td>
+                    <td>
+                      El documento es independiente, no necesita referencias
+                      externas
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>no</code></td>
+                    <td>
+                      El documento depende de una DTD u otra información externa
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
-          <p>
-            La declaración standalone tiene implicaciones en cómo un procesador
-            XML maneja el documento:
-          </p>
-          <ul>
-            <li>
-              <strong>standalone="yes"</strong>: Indica que no hay definiciones
-              externas que afecten al contenido del documento. El procesador no
-              necesita leer ningún archivo externo para interpretar
-              correctamente el documento.
-            </li>
-            <li>
-              <strong>standalone="no"</strong>: Indica que hay definiciones
-              externas (como DTDs) que afectan al contenido y el procesador debe
-              leerlas para interpretar correctamente el documento.
-            </li>
-          </ul>
+              <p>
+                La declaración standalone tiene implicaciones en cómo un procesador
+                XML maneja el documento:
+              </p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  <strong>standalone="yes"</strong>: Indica que no hay definiciones
+                  externas que afecten al contenido del documento. El procesador no
+                  necesita leer ningún archivo externo para interpretar
+                  correctamente el documento.
+                </li>
+                <li class="list-group-item">
+                  <strong>standalone="no"</strong>: Indica que hay definiciones
+                  externas (como DTDs) que afectan al contenido y el procesador debe
+                  leerlas para interpretar correctamente el documento.
+                </li>
+              </ul>
 
-          <p>
-            Si se omite la declaración standalone, se asume por defecto
-            <code>"no"</code>.
-          </p>
-        </article>
+              <p>
+                Si se omite la declaración standalone, se asume por defecto
+                <code>"no"</code>.
+              </p>
+            </article>
 
-        <article id="dtd-importancia">
-          <h2>Importancia de los DTDs</h2>
-          <p>
-            Los DTDs proporcionan un mecanismo para validar documentos XML,
-            asegurando que siguen una estructura específica. Esto es crucial
-            para:
-          </p>
-          <ul>
-            <li>Garantizar la integridad de los datos</li>
-            <li>Facilitar el intercambio de información entre sistemas</li>
-            <li>Establecer un estándar para un tipo específico de documento</li>
-          </ul>
-        </article>
+            <article id="dtd-importancia" class="mb-5">
+              <h2 class="h3">Importancia de los DTDs</h2>
+              <p>
+                Los DTDs proporcionan un mecanismo para validar documentos XML,
+                asegurando que siguen una estructura específica. Esto es crucial
+                para:
+              </p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Garantizar la integridad de los datos</li>
+                <li class="list-group-item">Facilitar el intercambio de información entre sistemas</li>
+                <li class="list-group-item">Establecer un estándar para un tipo específico de documento</li>
+              </ul>
+            </article>
 
-        <div class="navegacion">
-          <!-- Botón para ir al anterior punto -->
-          <a href="../Puntos/02_etiquetas.html" class="btn-siguiente">
-            &larr; Volver al anterior punto
-          </a>
-
-          <!-- Botón para ir al siguiente punto -->
-          <a href="../Puntos/01_ejercicios.html" class="btn-siguiente">
-            Ir a los ejercicios de esta Semana &rarr;
-          </a>
+            <div class="d-flex justify-content-between mt-5">
+              <a href="../Puntos/02_etiquetas.html" class="btn btn-primary">
+                &larr; Volver al anterior punto
+              </a>
+              <a href="../Puntos/01_ejercicios.html" class="btn btn-primary">
+                Ir a los ejercicios de esta Semana &rarr;
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-light py-3 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+      </div>
     </footer>
 
-    <button id="btnSubir" class="btn-subir">▲</button>
+    <!-- Botón para ir arriba -->
+    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
 
-    <script src="../../../js/navbar.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../js/scrollToTop.js"></script>
   </body>
 </html>

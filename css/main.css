@@ -1,274 +1,208 @@
 /* Import Inter font from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
-/* Global styles */
+/* Global styles - Sobrescribiendo Bootstrap */
+:root {
+  --primary-bg: #d5bdaf;
+  --secondary-bg: #f5ebe0;
+  --dark-text: #333;
+  --light-text: #555;
+  --accent-color: #8b7d6b;
+}
+
 body {
   font-family: "Inter", sans-serif;
-  line-height: 1.8;
-  margin: 0;
   background-color: #edede9;
-  color: #333;
-  overflow-x: hidden;
+  color: var(--dark-text);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 /* Header styles */
 header {
   background: linear-gradient(135deg, #d5bdaf, #d6ccc2);
-  color: #333;
+  color: var(--dark-text);
   text-align: center;
-  padding: 4rem 1rem;
-  min-height: 50px;
+  padding: 6rem 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 56px; /* Compensa el navbar fijo */
 }
 
-header h1 {
-  font-size: 3.5rem;
-  margin: 0;
-  letter-spacing: 1px;
+.display-4 {
   font-weight: 600;
+  letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-header p {
-  font-size: 1.6rem;
-  margin-top: 0.8rem;
+.lead {
   opacity: 0.9;
 }
 
-/* Main content */
+/* Main content - Adaptado para Bootstrap */
 .content {
-  width: 70%;
-  margin: 2rem auto;
-  padding: 2rem 1rem;
-  text-align: center;
-  background-color: #f5ebe0;
+  background-color: var(--secondary-bg);
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
-  flex: 1 0 auto;
+  padding: 2rem;
+  margin-bottom: 2rem;
 }
 
 .content h2 {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  color: #8b7d6b;
+  color: var(--accent-color);
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
-.content p {
-  font-size: 1.05rem;
-  color: #555;
-  margin-bottom: 2rem;
-  line-height: 1.8;
-}
-
 /* Footer */
 footer {
-  background-color: #d5bdaf;
-  color: #333;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: auto;
+  background-color: var(--primary-bg);
+  color: var(--dark-text);
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.95rem;
-  opacity: 0.9;
+  margin-top: auto;
 }
 
 /* Links */
 a {
   color: inherit;
-  text-decoration: none;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-  color: #d5bdaf;
+  color: var(--primary-bg);
   text-decoration: underline;
 }
 
-/* Navigation */
+/* Navbar Bootstrap personalizado */
 .navbar {
-  background-color: #d5bdaf;
-  padding: 0.8rem 1.5rem;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  overflow-y: auto;
-  top: 0;
-  z-index: 1000;
-  height: 65px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+.navbar-light {
+  background-color: var(--primary-bg) !important;
+}
+
+.navbar-brand, .nav-link {
+  color: var(--dark-text) !important;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #5a4a42 !important;
+}
+
+.dropdown-menu {
+  background-color: var(--secondary-bg);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-item {
+  color: var(--dark-text);
+}
+
+.dropdown-item:hover {
+  background-color: var(--primary-bg);
+  color: white;
+}
+
+/* Cards personalizadas */
+.card {
+  border: 1px solid #D6CCC2;
+  background-color: #faf1e9;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(213, 189, 175, 0.3) !important;
+}
+
+.card-title a {
+  color: var(--accent-color);
+}
+
 /* Personalización de la barra de desplazamiento */
-.navbar::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
-  height: 8px; /* Altura de la barra de desplazamiento horizontal */
-}
-
-/* Estilo para el track (fondo de la barra de desplazamiento) */
-.navbar::-webkit-scrollbar-track {
-  background-color: #333; /* Fondo del track */
-  border-radius: 10px; /* Bordes redondeados del track */
-}
-
-/* Estilo para el pulgar (la parte que arrastra) */
-.navbar::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color del pulgar */
-  border-radius: 10px; /* Bordes redondeados del pulgar */
-}
-
-/* Estilo para el pulgar al pasar el ratón por encima */
-.navbar::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Color del pulgar al pasar el ratón */
-}
-
-/* For the weeks that will be togglable */
-ul .week-points {
-  display: none;
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-ul .week-points li {
-  font-size: 0.9rem;
-}
-
-/* Estilo para el overlay */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Oscurecimiento */
-  backdrop-filter: blur(3px); /* Efecto de desenfoque */
-  display: none; /* Está oculto por defecto */
-  z-index: 1; /* Asegura que esté por encima del contenido */
-  transition: opacity 0.3s ease-in-out, backdrop-filter 0.6s ease-in-out; /* La transición del blur es más lenta */
-}
-
-/* Cuando el navbar está abierto, mostramos el overlay */
-.navbar.open ~ .overlay {
-  display: block;
-  opacity: 1;
-}
-
-/* Navbar configuraciones */
-.navbar-container {
-  display: flex;
-}
-
-.navbar {
-  position: fixed;
-  font-size: 16px;
-  top: 0;
-  left: -100%;
-  width: 350px;
-  height: 100%;
-  background-color: #333;
-  color: white;
-  transition: left 0.3s ease;
-  z-index: 2;
-}
-
-.navbar.open {
-  left: 0;
-}
-
-.hamburger {
-  font-size: 30px;
-  padding: 20px;
-  cursor: pointer;
-  color: #333;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.navbar ul {
-  padding: 10px;
-  list-style-type: none;
-  margin: 0;
-  width: 100%;
-}
-
-.navbar li {
-  padding: 5px 0;
-}
-
-.navbar a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  padding: 3px;
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  border-radius: 8px;
-  padding: 8px;
-}
-
-.navbar a:hover {
-  transform: scale(1.05);
-  background-color: #4d4d4d;
-}
-
-.close-btn {
-  background-color: #333;
-  color: white;
-  border: none;
-  font-size: 30px;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-ul .week-points {
-  display: none;
-  list-style-type: disc;
-  padding-left: 20px;
-  font-size: 12px;
-}
-
-ul .week-points li {
-  font-size: 0.9rem;
-}
-
-/* Personalización de la barra de desplazamiento de la página */
 ::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
-  height: 8px; /* Altura de la barra de desplazamiento horizontal */
+  width: 8px;
+  height: 8px;
 }
 
-/* Estilo para el track (fondo de la barra de desplazamiento) */
 ::-webkit-scrollbar-track {
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0
-  ); /* Fondo con opacidad 0 (totalmente transparente) */
-  border-radius: 10px; /* Bordes redondeados del track */
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
 }
 
-/* Estilo para el pulgar (la parte que arrastra) */
 ::-webkit-scrollbar-thumb {
-  background-color: #8b7d6b; /* Color del pulgar */
-  border-radius: 10px; /* Bordes redondeados del pulgar */
+  background-color: var(--accent-color);
+  border-radius: 10px;
 }
 
-/* Estilo para el pulgar al pasar el ratón por encima */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #ad9a8f; /* Color del pulgar al pasar el ratón */
+  background-color: #ad9a8f;
 }
 
-.enlace-contacto:hover {
-  color: #8a837c;
+/* Botones personalizados */
+.btn-outline-primary {
+  --bs-btn-color: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-bg: var(--accent-color);
+  --bs-btn-hover-border-color: var(--accent-color);
+  --bs-btn-active-bg: var(--accent-color);
+  --bs-btn-active-border-color: var(--accent-color);
+}
+
+/* Estilos específicos para index.html */
+.index-header {
+  padding: 7rem 1rem;
+}
+
+.index-header h1 {
+  font-size: 3.5rem;
+}
+
+.index-header p {
+  font-size: 1.6rem;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 992px) {
+  .index-header {
+    padding: 6rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-header {
+    padding: 5rem 1rem;
+  }
+  
+  .index-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .index-header p {
+    font-size: 1.3rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .index-header {
+    padding: 4rem 1rem;
+  }
+  
+  .index-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .index-header p {
+    font-size: 1.1rem;
+  }
+  
+  .content {
+    padding: 1rem;
+  }
 }

@@ -5,485 +5,279 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>01. Ejercicios de final de Semana</title>
-    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos -->
     <link rel="stylesheet" href="../../../css/main.css" />
     <link rel="stylesheet" href="../../../css/puntos.css" />
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
-  <body>
-    <header>
-      <h1>01. Ejercicios de final de Semana</h1>
-      <p>Semana 1</p>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../index.html">Inicio</a>
+            </li>
+            
+            <!-- Semana 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
+                <li><a class="dropdown-item" href="../semana1.html">Ir a la Semana 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item" href="./02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item" href="./03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item active" href="./01_ejercicios.html">Ejercicios 01</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
+                <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos XML válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 3
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
+                <li><a class="dropdown-item" href="../../3_semana/semana3.html">Ir a la Semana 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/03_ejercicios.html">Ejercicios 03</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 4
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week4Dropdown">
+                <li><a class="dropdown-item" href="../../4_semana/semana4.html">Ir a la Semana 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/12_yaml.html">YAML</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/13_json.html">JSON</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/14_markdown.html">Markdown</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/04_ejercicios.html">Ejercicios 04</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../formulario.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5 pt-4 text-center bg-gradient">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold">01. Ejercicios de final de Semana</h1>
+        <p class="lead fs-3">Semana 1</p>
+      </div>
     </header>
 
-    <!-- Agregar al inicio del archivo de cada página -->
-    <div class="overlay"></div>
-    <div class="navbar-container">
-      <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="main-nav-li"><a href="../../../index.html"><strong>Inicio</strong></a></li>
-          <li class="main-nav-li">
-            <a href="../semana1.html" class="toggle-week"
-              ><strong>&darr; Semana 1</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../semana1.html">Ir a la Semana 1</a>
-              </li>
-              <li>
-                <a href="./01_intro.html"
-                  >XML - Historia, estructura y sintáxis</a
-                >
-              </li>
-              <li>
-                <a href="./02_etiquetas.html"
-                  >Etiquetas, instrucciones de procesamiento y referencia a
-                  entidades</a
-                >
-              </li>
-              <li>
-                <a href="./03_declaracion.html"
-                  >Declaración de tipos de documento</a
-                >
-              </li>
-              <li><a href="./01_ejercicios.html">Ejercicios 01</a></li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../2_semana/semana2.html" class="toggle-week"
-              ><strong>&darr; Semana 2</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../2_semana/semana2.html">Ir a la Semana 2</a>
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/04_elaboracion.html"
-                  >Elaboración de documentos XML válidos y bien formados</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/05_espacios.html">
-                  Uso de espacios de nombres en XML - definición, referencia y
-                  prefijos</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/06_ventajas.html"
-                  >Ventajas de los espacios de nombres</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/07_metodos.html"
-                  >Métodos de definición de documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/02_ejercicios.html"
-                  >Ejercicios 02</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../3_semana/semana3.html" class="toggle-week"
-              ><strong>&darr; Semana 3</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../3_semana/semana3.html">Ir a la Semana 3</a>
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/08_creacion.html"
-                  >Creación de descripciones y asociación con documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/09_validacion.html"
-                  >Validación - herramientas de creación y validación</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/10_extensibilidad.html"
-                  >Extensibilidad de los esquemas - tipos derivados y esquemas
-                  para múltiples documentos</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/11_documentacion.html"
-                  >Documentación de especificaciones</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/03_ejercicios.html"
-                  >Ejercicios 03</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../4_semana/semana4.html" class="toggle-week"
-              ><strong>&darr; Semana 4</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../4_semana/semana4.html">Ir a la Semana 4</a>
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/12_yaml.html"
-                  >Otros lenguajes - YAML</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/13_json.html"
-                  >Otros lenguajes - JSON</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/14_markdown.html"
-                  >Otros lenguajes - Markdown</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/04_ejercicios.html"
-                  >Ejercicios 04</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../formulario.html"><strong>Contacto</strong></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <main class="container my-4 flex-grow-1">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="sticky-top pt-3">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="h5">Secciones</h2>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#explicacion">Explicación</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej01">Ejercicio 01</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej02">Ejercicio 02</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej03">Ejercicio 03</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej04">Ejercicio 04</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej05">Ejercicio 05</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej06">Ejercicio 06</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej07">Ejercicio 07</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej08">Ejercicio 08</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej09">Ejercicio 09</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#ej10">Ejercicio 10</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <main>
-      <aside class="sidebar">
-        <nav class="nav-secundario">
-          <h2>Secciones</h2>
-          <ul>
-            <li><a href="#ej01">Ejercicio 01</a></li>
-            <li><a href="#ej02">Ejercicio 02</a></li>
-            <li><a href="#ej03">Ejercicio 03</a></li>
-            <li><a href="#ej04">Ejercicio 04</a></li>
-            <li><a href="#ej05">Ejercicio 05</a></li>
-            <li><a href="#ej06">Ejercicio 06</a></li>
-            <li><a href="#ej07">Ejercicio 07</a></li>
-            <li><a href="#ej08">Ejercicio 08</a></li>
-            <li><a href="#ej09">Ejercicio 09</a></li>
-            <li><a href="#ej10">Ejercicio 10</a></li>
-          </ul>
-        </nav>
-      </aside>
+        <!-- Contenido principal -->
+        <div class="col-lg-9">
+          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+            <article id="explicacion">
+              <h2 class="text-center mb-4">Explicación</h2>
+              <p>
+                Estos ejercicios están diseñados para ayudarte a comprender y
+                practicar los conceptos fundamentales del lenguaje XML. A lo largo de
+                los ejercicios, trabajarás con la estructura básica de archivos XML,
+                la identificación y corrección de errores, el uso de atributos, la
+                validación de documentos bien formados, y otros aspectos clave como la
+                anidación de elementos y el manejo de caracteres especiales. Al
+                completar estos ejercicios, podrás desarrollar una comprensión sólida
+                de cómo crear, estructurar y validar archivos XML en diversas
+                situaciones.
+              </p>
 
-      <section>
-        <h2 id="explicacion">Explicación</h2>
+              <p>
+                A lo largo de los ejercicios verás que tendrás que
+                <strong>validarlos</strong>, para eso realizar eso, puedes utilizar
+                <a href="https://www.xmlvalidation.com/" target="_blank" class="text-decoration-none">la siguiente página.</a>
+              </p>
+            </article>
 
-        <p>
-          Estos ejercicios están diseñados para ayudarte a comprender y
-          practicar los conceptos fundamentales del lenguaje XML. A lo largo de
-          los ejercicios, trabajarás con la estructura básica de archivos XML,
-          la identificación y corrección de errores, el uso de atributos, la
-          validación de documentos bien formados, y otros aspectos clave como la
-          anidación de elementos y el manejo de caracteres especiales. Al
-          completar estos ejercicios, podrás desarrollar una comprensión sólida
-          de cómo crear, estructurar y validar archivos XML en diversas
-          situaciones.
-        </p>
-
-        <p>
-          A lo largo de los ejercicios verás que tendrás que
-          <strong>validarlos</strong>, para eso realizar eso, puedes utilizar
-          <strong
-            ><a href="https://www.xmlvalidation.com/"
-              >la siguiente página.</a
-            ></strong
-          >
-        </p>
-
-        <article id="ej01">
-          <h2>Ejercicio 01: Crear un archivo XML básico</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Crear un archivo XML con estructura básica.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML que contenga una lista de libros. Cada libro
-              debe tener los siguientes elementos:
-              <ul>
-                <li>título</li>
-                <li>autor</li>
-                <li>fecha</li>
-              </ul>
-            </li>
-            <li>
-              Asegúrate de que el archivo esté bien formado (validador XML).
-            </li>
-          </ol>
-
-          <p>
-            Asegúrate de utilizar un validador XML para confirmar que el archivo
-            está bien formado.
-          </p>
-        </article>
-
-        <article id="ej02">
-          <h2>Ejercicio 02: Identificar errores en XML</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Detectar errores de sintaxis en un archivo XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Observa el siguiente código XML y encuentra los errores de
-              sintaxis. Luego, corrige los errores.
-            </li>
-          </ol>
-
-          <pre>
-            <code>
-            &lt;productos&gt;
-              &lt;producto&gt;
-                 &lt;nombre&gt;Televisión&lt;/nombre&gt;
-                 &lt;precio&gt;500/&lt;precio&gt;
-               &lt;/producto&gt;
-               &lt;producto&gt;
-                &lt;nombre&gt;Teléfono&lt;/nombre&gt;
-                &lt;percio&gt;300&lt;/precio&gt;
-              &lt;producto&gt;
-            &lt;/produtos&gt;
-            </code>
-            </pre>
-
-          <p>
-            El código tiene varios errores que deberás corregir para que sea
-            válido.
-          </p>
-        </article>
-
-        <article id="ej03">
-          <h2>Ejercicio 03: Uso de atributos en XML</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Usar atributos en elementos XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML que contenga información de al menos 2
-              estudiantes con los siguientes atributos:
-              <ul>
-                <li>id (número único de identificación).</li>
-                <li>edad (edad del estudiante).</li>
-              </ul>
-            </li>
-            <li>Usa estos atributos dentro de los elementos estudiante.</li>
-          </ol>
-
-          <p>
-            Recuerda que los atributos deben ser definidos dentro de las
-            etiquetas de los elementos.
-          </p>
-        </article>
-
-        <article id="ej04">
-          <h2>Ejercicio 04: Crear una jerarquía con XML</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Criar una jerarquía de elementos XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML que contenga 2 jugadores con los siguientes
-              elementos:
-              <ul>
-                <li>nombre</li>
-                <li>apellidos</li>
-                <li>posición</li>
-                <li>número</li>
-                <li>edad</li>
-                <li>equipo</li>
-              </ul>
-            </li>
-          </ol>
-
-          <p>
-            Considera usar elementos anidados para representar la jerarquía de
-            los jugadores.
-          </p>
-        </article>
-
-        <article id="ej05">
-          <h2>Ejercicio 05: Declaración XML</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Entender la declaración XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML con una declaración de codificación de texto
-              que no sea UTF-8 y valida que sea bien formada.
-            </li>
-          </ol>
-
-          <p>
-            Asegúrate de declarar correctamente la codificación al inicio del
-            archivo XML.
-          </p>
-        </article>
-
-        <article id="ej06">
-          <h2>Ejercicio 06: Validación de un documento bien formado</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Asegurarse de que un XML esté bien formado.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML con tus tres películas favoritas, separado por
-              película que contenga los subelementos título, director, fecha y
-              género.
-            </li>
-            <li>Asegúrate de que esté bien formado (validador XML).</li>
-          </ol>
-
-          <p>
-            Verifica que el archivo se valide correctamente con un validador
-            XML.
-          </p>
-        </article>
-
-        <article id="ej07">
-          <h2>Ejercicio 07: Anidación de elementos</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Entender cómo anidar correctamente los elementos XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML para un menú de restaurante con los siguientes
-              elementos:
-              <ul>
-                <li>menú</li>
-                <li>
-                  platillo (con subelementos nombre, precio, descripción).
-                </li>
-              </ul>
-            </li>
-          </ol>
-
-          <p>
-            Recuerda que los elementos dentro del menú deben estar correctamente
-            anidados y cerrados.
-          </p>
-        </article>
-
-        <article id="ej08">
-          <h2>Ejercicio 08: Uso de caracteres especiales</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Usar caracteres especiales en XML.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML con información sobre productos (puede ser
-              pack que contengan varias cosas, por ejemplo). Usa entidades XML
-              para representar los siguientes caracteres: &amp;, &lt;, &gt;,
-              &quot;, &#39;.
-            </li>
-          </ol>
-
-          <p>
-            Los caracteres especiales deben ser representados con entidades XML.
-          </p>
-        </article>
-
-        <article id="ej09">
-          <h2>Ejercicio 09: Validar atributos de un elemento</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Validar que los atributos estén correctamente definidos.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML con una lista de personas. Cada persona debe
-              tener un atributo edad y sexo, además de los elementos nombre y
-              apellido.
-            </li>
-            <li>
-              Asegúrate de que los atributos estén bien definidos y en su lugar
-              adecuado.
-            </li>
-          </ol>
-
-          <p>
-            Verifica que los atributos edad y sexo estén dentro de las etiquetas
-            correctas.
-          </p>
-        </article>
-
-        <article id="ej10">
-          <h2>Ejercicio 10: Crear un archivo XML con múltiples niveles</h2>
-
-          <h3>Objetivo:</h3>
-          <p>Criar un archivo XML con varios niveles de elementos.</p>
-
-          <h3>Tarea:</h3>
-          <ol>
-            <li>
-              Crea un archivo XML con la siguiente estructura:
-              <ul>
-                <li>
-                  Un elemento raíz <code>empresa</code> que contenga al menos 4
-                  empleados (<code>empleado</code>), cada uno con:
-                  <ul>
-                    <li>nombre</li>
-                    <li>cargo</li>
-                    <li>departamento</li>
-                    <li>salario</li>
+            <article id="ej01" class="mb-5">
+              <h2 class="h3">Ejercicio 01: Crear un archivo XML básico</h2>
+              <h3 class="h4">Objetivo:</h3>
+              <p>Crear un archivo XML con estructura básica.</p>
+              <h3 class="h4">Tarea:</h3>
+              <ol class="list-group mb-3">
+                <li class="list-group-item">
+                  Crea un archivo XML que contenga una lista de libros. Cada libro
+                  debe tener los siguientes elementos:
+                  <ul class="list-group mt-2">
+                    <li class="list-group-item">título</li>
+                    <li class="list-group-item">autor</li>
+                    <li class="list-group-item">fecha</li>
                   </ul>
                 </li>
-              </ul>
-            </li>
-          </ol>
+                <li class="list-group-item">
+                  Asegúrate de que el archivo esté bien formado (validador XML).
+                </li>
+              </ol>
+              <p class="mt-3">
+                Asegúrate de utilizar un validador XML para confirmar que el archivo
+                está bien formado.
+              </p>
+            </article>
 
-          <p>
-            Asegúrate de que la jerarquía de elementos esté bien definida, con
-            un solo elemento raíz.
-          </p>
-        </article>
+            <article id="ej02" class="mb-5">
+              <h2 class="h3">Ejercicio 02: Identificar errores en XML</h2>
+              <h3 class="h4">Objetivo:</h3>
+              <p>Detectar errores de sintaxis en un archivo XML.</p>
+              <h3 class="h4">Tarea:</h3>
+              <ol class="list-group mb-3">
+                <li class="list-group-item">
+                  Observa el siguiente código XML y encuentra los errores de
+                  sintaxis. Luego, corrige los errores.
+                </li>
+              </ol>
+              <pre class="bg-light p-3 rounded"><code>
+&lt;productos&gt;
+  &lt;producto&gt;
+     &lt;nombre&gt;Televisión&lt;/nombre&gt;
+     &lt;precio&gt;500/&lt;precio&gt;
+   &lt;/producto&gt;
+   &lt;producto&gt;
+    &lt;nombre&gt;Teléfono&lt;/nombre&gt;
+    &lt;percio&gt;300&lt;/precio&gt;
+  &lt;producto&gt;
+&lt;/produtos&gt;
+              </code></pre>
+              <p class="mt-3">
+                El código tiene varios errores que deberás corregir para que sea
+                válido.
+              </p>
+            </article>
 
-        <div class="navegacion">
-          <!-- Botón para ir al anterior punto -->
-          <a href="../Puntos/03_declaracion.html" class="btn-siguiente">
-            &larr; Volver al anterior punto
-          </a>
+            <article id="ej03" class="mb-5">
+              <h2 class="h3">Ejercicio 03: Uso de atributos en XML</h2>
+              <h3 class="h4">Objetivo:</h3>
+              <p>Usar atributos en elementos XML.</p>
+              <h3 class="h4">Tarea:</h3>
+              <ol class="list-group mb-3">
+                <li class="list-group-item">
+                  Crea un archivo XML que contenga información de al menos 2
+                  estudiantes con los siguientes atributos:
+                  <ul class="list-group mt-2">
+                    <li class="list-group-item">id (número único de identificación).</li>
+                    <li class="list-group-item">edad (edad del estudiante).</li>
+                  </ul>
+                </li>
+                <li class="list-group-item">Usa estos atributos dentro de los elementos estudiante.</li>
+              </ol>
+              <p class="mt-3">
+                Recuerda que los atributos deben ser definidos dentro de las
+                etiquetas de los elementos.
+              </p>
+            </article>
 
-          <!-- Botón para ir al siguiente punto -->
-          <a href="../../2_semana/semana2.html" class="btn-siguiente">
-            Ir a la Semana 2 &rarr;
-          </a>
+            <article id="ej04" class="mb-5">
+              <h2 class="h3">Ejercicio 04: Crear una jerarquía con XML</h2>
+              <h3 class="h4">Objetivo:</h3>
+              <p>Crear una jerarquía de elementos XML.</p>
+              <h3 class="h4">Tarea:</h3>
+              <ol class="list-group mb-3">
+                <li class="list-group-item">
+                  Crea un archivo XML que contenga 2 jugadores con los siguientes
+                  elementos:
+                  <ul class="list-group mt-2">
+                    <li class="list-group-item">nombre</li>
+                    <li class="list-group-item">apellidos</li>
+                    <li class="list-group-item">posición</li>
+                    <li class="list-group-item">número</li>
+                    <li class="list-group-item">edad</li>
+                    <li class="list-group-item">equipo</li>
+                  </ul>
+                </li>
+              </ol>
+              <p class="mt-3">
+                Considera usar elementos anidados para representar la jerarquía de
+                los jugadores.
+              </p>
+            </article>
+
+            <div class="d-flex justify-content-between mt-5">
+              <a href="../Puntos/03_declaracion.html" class="btn btn-primary">
+                &larr; Volver al anterior punto
+              </a>
+              <a href="../../2_semana/semana2.html" class="btn btn-primary">
+                Ir a la Semana 2 &rarr;
+              </a>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-light py-3 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+      </div>
     </footer>
 
-    <button id="btnSubir" class="btn-subir">▲</button>
+    <!-- Botón para ir arriba -->
+    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
 
-    <script src="../../../js/navbar.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../js/scrollToTop.js"></script>
   </body>
 </html>

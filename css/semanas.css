@@ -1,59 +1,71 @@
-/* Ajustes para la sección de puntos */
-.content {
-    width: 90%;
+/* Estilos específicos para las páginas de semanas */
+
+/* Header específico para páginas de semana */
+.week-header {
+  padding: 5rem 0;
+  margin-top: 56px; /* Compensa el navbar fijo */
 }
 
-.points {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.point {
+/* Cards de puntos personalizadas */
+.point-card {
+  border: 1px solid #D6CCC2;
   background-color: #faf1e9;
-  border: 1px solid #d6ccc2;
-  border-radius: 8px;
-  padding: 1rem;
-  width: 30%; /* Ajuste para 3 puntos en línea */
-  box-shadow: 0 4px 8px rgba(213, 189, 175, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
-.point:hover {
+.point-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(213, 189, 175, 0.3);
+  box-shadow: 0 8px 16px rgba(213, 189, 175, 0.3) !important;
 }
 
-.point h3 {
-  color: #ad9d87;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+.point-card .card-title a {
+  color: #8b7d6b;
+  font-weight: 600;
 }
 
-.point ul {
-  list-style-type: none;
-  padding: 0;
+.point-card ul {
+  padding-left: 1rem;
   text-align: left;
 }
 
-.point ul li {
+.point-card ul li {
   margin-bottom: 0.5rem;
+  font-size: 0.95rem;
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-  .points {
-    flex-direction: column;
-    gap: 1rem;
-  }
+/* Contenido principal */
+.week-content {
+  width: 95%;
+  margin: 2rem auto;
+}
 
-  .point {
-    width: 100%;
+/* Responsividad */
+@media (max-width: 992px) {
+  .week-header {
+      padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-header {
+      padding: 3rem 0;
+  }
+  
+  .point-card {
+      margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .week-header {
+      padding: 2.5rem 0;
+  }
+  
+  .week-header h1 {
+      font-size: 2rem;
+  }
+  
+  .week-header p {
+      font-size: 1.1rem;
   }
 }

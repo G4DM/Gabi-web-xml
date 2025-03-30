@@ -4,296 +4,238 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>09. Validación - herramientas de creación y validación</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos -->
     <link rel="stylesheet" href="../../../css/main.css" />
     <link rel="stylesheet" href="../../../css/puntos.css" />
-    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
-  <body>
-    <header>
-      <h1>09. Validación - herramientas de creación y validación</h1>
-      <p>Semana 3</p>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../index.html">Inicio</a>
+            </li>
+            
+            <!-- Semana 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
+                <li><a class="dropdown-item" href="../../1_semana/semana1.html">Ir a la Semana 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../1_semana/Puntos/01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item" href="../../1_semana/Puntos/02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item" href="../../1_semana/Puntos/03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item" href="../../1_semana/Puntos/01_ejercicios.html">Ejercicios 01</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
+                <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacio de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="week3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 3
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
+                <li><a class="dropdown-item" href="../../3_semana/semana3.html">Ir a la Semana 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item active" href="../../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/03_ejercicios.html">Ejercicios 03</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 4
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week4Dropdown">
+                <li><a class="dropdown-item" href="../../4_semana/semana4.html">Ir a la Semana 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/12_yaml.html">YAML</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/13_json.html">JSON</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/14_markdown.html">Markdown</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/04_ejercicios.html">Ejercicios 04</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../formulario.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5 pt-4 text-center bg-gradient">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold">09. Validación - herramientas de creación y validación</h1>
+        <p class="lead fs-3">Semana 3</p>
+      </div>
     </header>
 
-    <!-- Agregar al inicio del archivo de cada página -->
-    <div class="overlay"></div>
-    <div class="navbar-container">
-      <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="main-nav-li">
-            <a href="../../../index.html"><strong>Inicio</strong></a>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../1_semana/semana1.html" class="toggle-week"
-              ><strong>&darr; Semana 1</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../1_semana/semana1.html">Ir a la Semana 1</a>
-              </li>
-              <li>
-                <a href="../../1_semana/Puntos/01_intro.html"
-                  >XML - Historia, estructura y sintáxis</a
-                >
-              </li>
-              <li>
-                <a href="../../1_semana/Puntos/02_etiquetas.html"
-                  >Etiquetas, instrucciones de procesamiento y referencia a
-                  entidades</a
-                >
-              </li>
-              <li>
-                <a href="../../1_semana/Puntos/03_declaracion.html"
-                  >Declaración de tipos de documento</a
-                >
-              </li>
-              <li>
-                <a href="../../1_semana/Puntos/01_ejercicios.html"
-                  >Ejercicios 01</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../2_semana/semana2.html" class="toggle-week"
-              ><strong>&darr; Semana 2</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../2_semana/semana2.html">Ir a la Semana 2</a>
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/04_elaboracion.html"
-                  >Elaboración de documentos XML válidos y bien formados</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/05_espacios.html">
-                  Uso de espacios de nombres en XML - definición, referencia y
-                  prefijos</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/06_ventajas.html"
-                  >Ventajas de los espacios de nombres</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/07_metodos.html"
-                  >Métodos de definición de documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/02_ejercicios.html"
-                  >Ejercicios 02</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="./semana3.html" class="toggle-week"
-              ><strong>&darr; Semana 3</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="./semana3.html">Ir a la Semana 3</a>
-              </li>
-              <li>
-                <a href="./08_creacion.html"
-                  >Creación de descripciones y asociación con documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="./09_validacion.html"
-                  >Validación - herramientas de creación y validación</a
-                >
-              </li>
-              <li>
-                <a href="./10_extensibilidad.html"
-                  >Extensibilidad de los esquemas - tipos derivados y esquemas
-                  para múltiples documentos</a
-                >
-              </li>
-              <li>
-                <a href="./11_documentacion.html"
-                  >Documentación de especificaciones</a
-                >
-              </li>
-              <li>
-                <a href="./03_ejercicios.html">Ejercicios 03</a>
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../4_semana/semana4.html" class="toggle-week"
-              ><strong>&darr; Semana 4</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../4_semana/semana4.html">Ir a la Semana 4</a>
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/12_yaml.html"
-                  >Otros lenguajes - YAML</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/13_json.html"
-                  >Otros lenguajes - JSON</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/14_markdown.html"
-                  >Otros lenguajes - Markdown</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/04_ejercicios.html"
-                  >Ejercicios 04</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../formulario.html"><strong>Contacto</strong></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <main class="container my-4 flex-grow-1">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="sticky-top pt-3">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="h5">Secciones</h2>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#introduccion">Introducción</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#metodos-validacion">Métodos de Validación</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#validacion-dtd">Validación con DTD</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#validacion-xsd">Validación con XSD</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#herramientas-validacion">Herramientas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <main>
-        <aside class="sidebar">
-            <nav class="nav-secundario">
-              <h2>Secciones</h2>
-              <ul>
-    
-                <li>
-                  <a href="#introduccion">Introducción</a>
-                </li>
-                <li>
-                  <a href="#metodos-validacion">Métodos de Validación</a>
-                </li>
-                <li>
-                  <a href="#validacion-dtd">Validación con DTD</a>
-                </li>
-                <li>
-                  <a href="#validacion-xsd">Validación con XML Schema</a>
-                </li>
-                <li>
-                  <a href="#herramientas-validacion">Herramientas para Validar</a>
-                </li>
-    
-              </ul>
-            </nav>
-          </aside>
-    
-          <section>
-            <h2>Validación de XML</h2> 
-    
-            <article id="introduccion"> 
-              <h2>Introducción</h2>
-              <p>XML (Extensible Markup Language) es un lenguaje de marcado utilizado para almacenar y transportar datos. A diferencia de HTML, XML no define la presentación, sino la estructura y el significado de los datos.</p>
-              <p>La validación de XML es fundamental para asegurar que los documentos cumplen con las reglas definidas, evitando errores en el procesamiento y facilitando la integración entre sistemas.</p>
+        <!-- Contenido principal -->
+        <div class="col-lg-9">
+          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+            <h2 class="text-center mb-4">Validación de documentos XML</h2>
+            
+            <article id="introduccion" class="mb-5">
+              <h2 class="h3">Introducción</h2>
+              <p>
+                XML (Extensible Markup Language) es un lenguaje de marcado utilizado para almacenar y transportar datos. A diferencia de HTML, XML no define la presentación, sino la estructura y el significado de los datos.
+              </p>
+              <p>
+                La validación de XML es fundamental para asegurar que los documentos cumplen con las reglas definidas, evitando errores en el procesamiento y facilitando la integración entre sistemas.
+              </p>
             </article>
-    
-            <article id="metodos-validacion">
-              <h2>Métodos de Validación</h2>
+
+            <article id="metodos-validacion" class="mb-5">
+              <h2 class="h3">Métodos de Validación</h2>
               <p>Existen varios métodos para validar documentos XML:</p>
-              <ul>
-                <li><strong>DTD (Document Type Definition)</strong>: Define la estructura y los elementos válidos de un documento XML. Es una opción simple pero menos flexible.</li>
-                <li><strong>XML Schema (XSD)</strong>: Permite definir con mayor precisión la estructura y los tipos de datos en XML. Es más avanzado que DTD.</li>
-                <li><strong>RELAX NG</strong>: Un lenguaje más flexible y legible para la validación de XML, con una sintaxis sencilla.</li>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>DTD (Document Type Definition)</strong>: Define la estructura y los elementos válidos de un documento XML. Es una opción simple pero menos flexible.</li>
+                <li class="list-group-item"><strong>XML Schema (XSD)</strong>: Permite definir con mayor precisión la estructura y los tipos de datos en XML. Es más avanzado que DTD.</li>
+                <li class="list-group-item"><strong>RELAX NG</strong>: Un lenguaje más flexible y legible para la validación de XML, con una sintaxis sencilla.</li>
               </ul>
             </article>
-    
-            <article id="validacion-dtd">
-              <h2>Validación con DTD</h2>
-              <p>DTD define la estructura legal de un documento XML, asegurando que se ajuste a un formato específico.</p>
-    
-              <h3>Ejemplo de DTD</h3>
-              <pre>
-              &lt;!DOCTYPE libro [ 
-              &lt;!ELEMENT libro (titulo, autor)> 
-              &lt;!ELEMENT titulo (#PCDATA)> 
-              &lt;!ELEMENT autor (#PCDATA)> 
-              ]>
-              </pre>
-    
-              <h3>Ejemplo de XML</h3>
-              <pre>
-              &lt;?xml version="1.0"?> 
-              &lt;!DOCTYPE libro SYSTEM "libro.dtd"> 
-              &lt;libro> 
-                  &lt;titulo>Aprender XML&lt;/titulo> 
-                  &lt;autor>Juan Pérez&lt;/autor> 
-              &lt;/libro>
-              </pre>
-    
-              <h3>Uso de xmllint para validar</h3>
-              <pre>xmllint --noout --dtdvalid libro.dtd libro.xml</pre>
+
+            <article id="validacion-dtd" class="mb-5">
+              <h2 class="h3">Validación con DTD</h2>
+              <p>
+                DTD define la estructura legal de un documento XML, asegurando que se ajuste a un formato específico.
+              </p>
+              
+              <h3 class="h4">Ejemplo de DTD</h3>
+              <pre class="bg-light p-3 rounded"><code>&lt;!DOCTYPE libro [
+  &lt;!ELEMENT libro (titulo, autor)&gt;
+  &lt;!ELEMENT titulo (#PCDATA)&gt;
+  &lt;!ELEMENT autor (#PCDATA)&gt;
+]&gt;</code></pre>
+
+              <h3 class="h4">Ejemplo de XML</h3>
+              <pre class="bg-light p-3 rounded"><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE libro SYSTEM "libro.dtd"&gt;
+&lt;libro&gt;
+    &lt;titulo&gt;Aprender XML&lt;/titulo&gt;
+    &lt;autor&gt;Juan Pérez&lt;/autor&gt;
+&lt;/libro&gt;</code></pre>
+
+              <h3 class="h4">Uso de xmllint para validar</h3>
+              <pre class="bg-light p-3 rounded"><code>xmllint --noout --dtdvalid libro.dtd libro.xml</code></pre>
             </article>
-    
-            <article id="validacion-xsd">
-              <h2>Validación con XML Schema (XSD)</h2>
-              <p>XML Schema (XSD) es una alternativa más robusta y flexible que DTD para definir la estructura de documentos XML.</p>
-    
-              <h3>Ejemplo de XML Schema</h3>
-              <pre>
-              &lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"> 
-                &lt;xs:element name="libro"> 
-                  &lt;xs:complexType> 
-                    &lt;xs:sequence> 
-                      &lt;xs:element name="titulo" type="xs:string"/> 
-                      &lt;xs:element name="autor" type="xs:string"/> 
-                    &lt;/xs:sequence> 
-                  &lt;/xs:complexType> 
-                &lt;/xs:element> 
-              &lt;/xs:schema>
-              </pre>
-    
-              <h3>Ejemplo de XML</h3>
-              <pre>
-              &lt;?xml version="1.0"?> 
-              &lt;libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libro.xsd"> 
-                  &lt;titulo>Aprender XML&lt;/titulo> 
-                  &lt;autor>Juan Pérez&lt;/autor> 
-              &lt;/libro>
-              </pre>
-    
-              <h3>Uso de xmllint para validar</h3>
-              <pre>xmllint --noout --schema libro.xsd libro.xml</pre>
+
+            <article id="validacion-xsd" class="mb-5">
+              <h2 class="h3">Validación con XML Schema (XSD)</h2>
+              <p>
+                XML Schema (XSD) es una alternativa más robusta y flexible que DTD para definir la estructura de documentos XML.
+              </p>
+              
+              <h3 class="h4">Ejemplo de XML Schema</h3>
+              <pre class="bg-light p-3 rounded"><code>&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;xs:element name="libro"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:sequence&gt;
+        &lt;xs:element name="titulo" type="xs:string"/&gt;
+        &lt;xs:element name="autor" type="xs:string"/&gt;
+      &lt;/xs:sequence&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</code></pre>
+
+              <h3 class="h4">Ejemplo de XML</h3>
+              <pre class="bg-light p-3 rounded"><code>&lt;?xml version="1.0"?&gt;
+&lt;libro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xsi:noNamespaceSchemaLocation="libro.xsd"&gt;
+    &lt;titulo&gt;Aprender XML&lt;/titulo&gt;
+    &lt;autor&gt;Juan Pérez&lt;/autor&gt;
+&lt;/libro&gt;</code></pre>
+
+              <h3 class="h4">Uso de xmllint para validar</h3>
+              <pre class="bg-light p-3 rounded"><code>xmllint --noout --schema libro.xsd libro.xml</code></pre>
             </article>
-    
-            <article id="herramientas-validacion">
-              <h2>Herramientas para Validar</h2>
+
+            <article id="herramientas-validacion" class="mb-5">
+              <h2 class="h3">Herramientas para Validar</h2>
               <p>Existen diversas herramientas para validar documentos XML:</p>
-              <ul>
-                <li><strong>xmllint</strong>: Herramienta de línea de comandos para validar XML contra DTD y XSD.</li>
-                <li><strong>XML Validator</strong>: Servicio en línea para validar XML contra DTD, XSD y RELAX NG.</li>
-                <li><strong>Oxygen XML Editor</strong>: Editor avanzado que incluye validación en tiempo real y soporte para múltiples esquemas.</li>
+              <ul class="list-group">
+                <li class="list-group-item"><strong>xmllint</strong>: Herramienta de línea de comandos para validar XML contra DTD y XSD.</li>
+                <li class="list-group-item"><strong>XML Validator</strong>: Servicio en línea para validar XML contra DTD, XSD y RELAX NG.</li>
+                <li class="list-group-item"><strong>Oxygen XML Editor</strong>: Editor avanzado que incluye validación en tiempo real y soporte para múltiples esquemas.</li>
               </ul>
             </article>
-            <div class="navegacion">
-              <!-- Botón para ir al anterior punto -->
-              <a href="./08_creacion.html" class="btn-siguiente">
+
+            <div class="d-flex justify-content-between mt-5">
+              <a href="./08_creacion.html" class="btn btn-primary">
                 &larr; Volver al anterior punto
               </a>
-            
-              <!-- Botón para ir al siguiente punto -->
-              <a href="./10_extensibilidad.html" class="btn-siguiente">
+              <a href="./10_extensibilidad.html" class="btn btn-primary">
                 Ir al siguiente punto &rarr;
               </a>
             </div>
           </section>
-        </main>
-    
-        <footer>
-          <p>&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
-        </footer>
-    
-        <button id="btnSubir" class="btn-subir">▲</button>
-    
-        <script src="../../../js/navbar.js"></script>
-        <script src="../../../js/scrollToTop.js"></script>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-light py-3 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+      </div>
+    </footer>
+
+    <!-- Botón para ir arriba -->
+    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../js/scrollToTop.js"></script>
   </body>
 </html>

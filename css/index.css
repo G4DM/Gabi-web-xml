@@ -1,72 +1,70 @@
-/* Estilos específicos para página index */
-/* Estilo para las semanas */
+/* Estilos específicos para página index - Ahora complementa Bootstrap */
 
-/* Se ha modificado el header para que en el inicio sea más grande que las otras páginas */
-header {
-    padding: 96px;
+/* Header más grande solo en index */
+.index-header {
+    padding: 7rem 1rem;
 }
 
-h1 {
-    font-size: 64px;
+.index-header h1 {
+    font-size: 3.5rem;
 }
 
-h2 {
-    font-size: 28px;
-    color: #837665;
+.index-header p {
+    font-size: 1.6rem;
 }
 
-.weeks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1.5rem;
-    width: 100%;
-}
-
-.week {
-    background-color: #faf1e9;
-    border: 1px solid #D6CCC2;
-    border-radius: 8px;
-    padding: 1rem;
-    flex: 0 0 48%;
-    box-shadow: 0 4px 8px rgba(213, 189, 175, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 48%;
-    box-sizing: border-box;
-    margin-bottom: 1.5rem;
-}
-
-.week:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(213, 189, 175, 0.3);
-}
-
-.week h3 {
+/* Estilos para las cards de semanas (sobreescribiendo Bootstrap) */
+.week-card .card-title a {
     color: #ad9d87;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
 }
 
-.week ul {
+.week-card ul {
     list-style-type: disc;
-    margin: 0 0 0 1.5rem;
+    padding-left: 1.5rem;
     text-align: left;
 }
 
-/* Mejora de responsividad */
+.week-card ul li {
+    margin-bottom: 0.5rem;
+}
+
+.week-card ul li a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.week-card ul li a:hover {
+    color: var(--primary-bg);
+    text-decoration: underline;
+}
+
+/* Responsividad específica */
 @media (max-width: 768px) {
-    .weeks {
-        flex-direction: column; /* Tarjetas apiladas en pantallas pequeñas */
-        gap: 1rem;
+    .index-header {
+        padding: 5rem 1rem;
     }
     
-    .week {
-        max-width: 100%;
-        flex: 1 1 100%;
-        margin-bottom: 1rem;
+    .index-header h1 {
+        font-size: 2.5rem;
     }
     
-    .content {
-        width: 90%;
+    .index-header p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .index-header {
+        padding: 4rem 1rem;
+    }
+    
+    .index-header h1 {
+        font-size: 2rem;
+    }
+    
+    .index-header p {
+        font-size: 1.1rem;
     }
 }

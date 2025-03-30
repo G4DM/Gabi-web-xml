@@ -5,413 +5,348 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>XML - Historia, introducción y cosas básicas</title>
-    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tus estilos -->
     <link rel="stylesheet" href="../../../css/main.css">
     <link rel="stylesheet" href="../../../css/puntos.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
-  <body>
-    <header>
-      <h1>01. XML - Historia, introducción y cosas básicas</h1>
-      <p>Semana 1</p>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../../../index.html">Inicio</a>
+            </li>
+            
+            <!-- Semana 1 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 1
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
+                <li><a class="dropdown-item" href="../semana1.html">Ir a la Semana 1</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item active" href="./01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item" href="./02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item" href="./03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item" href="./01_ejercicios.html">Ejercicios 01</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 2 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week2Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 2
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
+                <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos XML válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 3 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week3Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 3
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
+                <li><a class="dropdown-item" href="../../3_semana/semana3.html">Ir a la Semana 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/03_ejercicios.html">Ejercicios 03</a></li>
+              </ul>
+            </li>
+            
+            <!-- Semana 4 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="week4Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semana 4
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="week4Dropdown">
+                <li><a class="dropdown-item" href="../../4_semana/semana4.html">Ir a la Semana 4</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/12_yaml.html">YAML</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/13_json.html">JSON</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/14_markdown.html">Markdown</a></li>
+                <li><a class="dropdown-item" href="../../4_semana/Puntos/04_ejercicios.html">Ejercicios 04</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="../../formulario.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="mt-5 pt-4 text-center bg-gradient">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold">01. XML - Historia, introducción y cosas básicas</h1>
+        <p class="lead fs-3">Semana 1</p>
+      </div>
     </header>
 
-    <!-- Agregar al inicio del archivo de cada página -->
-    <div class="overlay"></div>
-    <div class="navbar-container">
-      <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="main-nav-li"><a href="../../../index.html"><strong>Inicio</strong></a></li>
-          <li class="main-nav-li">
-            <a href="../../1_semana/semana1.html" class="toggle-week"
-              ><strong>&darr; Semana 1</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../semana1.html">Ir a la Semana 1</a>
-              </li>
-              <li>
-                <a href="../Puntos/01_intro.html"
-                  >XML - Historia, estructura y sintáxis</a
-                >
-              </li>
-              <li>
-                <a href="../Puntos/02_etiquetas.html"
-                  >Etiquetas, instrucciones de procesamiento y referencia a
-                  entidades</a
-                >
-              </li>
-              <li>
-                <a href="../Puntos/03_declaracion.html"
-                  >Declaración de tipos de documento</a
-                >
-              </li>
-              <li><a href="../Puntos/01_ejercicios.html">Ejercicios 01</a></li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../2_semana/semana2.html" class="toggle-week"
-              ><strong>&darr; Semana 2</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../2_semana/semana2.html">Ir a la Semana 2</a>
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/04_elaboracion.html"
-                  >Elaboración de documentos XML válidos y bien formados</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/05_espacios.html">
-                  Uso de espacios de nombres en XML - definición, referencia y
-                  prefijos</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/06_ventajas.html"
-                  >Ventajas de los espacios de nombres</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/07_metodos.html"
-                  >Métodos de definición de documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../2_semana/Puntos/02_ejercicios.html"
-                  >Ejercicios 02</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../3_semana/semana3.html" class="toggle-week"
-              ><strong>&darr; Semana 3</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../3_semana/semana3.html">Ir a la Semana 3</a>
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/08_creacion.html"
-                  >Creación de descripciones y asociación con documentos XML</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/09_validacion.html"
-                  >Validación - herramientas de creación y validación</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/10_extensibilidad.html"
-                  >Extensibilidad de los esquemas - tipos derivados y esquemas
-                  para múltiples documentos</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/11_documentacion.html"
-                  >Documentación de especificaciones</a
-                >
-              </li>
-              <li>
-                <a href="../../3_semana/Puntos/03_ejercicios.html"
-                  >Ejercicios 03</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../4_semana/semana4.html" class="toggle-week"
-              ><strong>&darr; Semana 4</strong></a
-            >
-            <ul class="week-points">
-              <li>
-                <a href="../../4_semana/semana4.html">Ir a la Semana 4</a>
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/12_yaml.html"
-                  >Otros lenguajes - YAML</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/13_json.html"
-                  >Otros lenguajes - JSON</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/14_markdown.html"
-                  >Otros lenguajes - Markdown</a
-                >
-              </li>
-              <li>
-                <a href="../../4_semana/Puntos/04_ejercicios.html"
-                  >Ejercicios 04</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="main-nav-li">
-            <a href="../../formulario.html"><strong>Contacto</strong></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <main>
-      <aside class="sidebar">
-        <nav class="nav-secundario">
-          <h2>Secciones</h2>
-          <ul>
-            <li><a href="#que-es-xml">¿Qué es XML?</a></li>
-            <li><a href="#historia-de-xml-como-empezo-y-porque">Historia de XML: Cómo empezó y porqué</a></li>
-            <li><a href="#diferencias-entre-xml-y-html">Diferencias entre XML y HTML</a></li>
-            <li><a href="#estructura-tree">Estructura (Tree)</a></li>
-            <li><a href="#sintaxis">Sintaxis</a></li>
-            <li><a href="#webgrafia">Webgrafía</a></li>
-          </ul>
-        </nav>
-      </aside>
-
-      <section>
-        <h2 class="titulo-section">Introducción a XML</h2>
-        <article id="que-es-xml">
-          <h2>¿Que es XML?</h2>
-          <p>
-            XML es el acrónimo de "eXtensible Markup Language", que en español
-            significa Lenguaje de Marcas Extensible. Se trata de un lenguaje de
-            marcado con una estructura similar a HTML, pero con un enfoque
-            diferente. Mientras que HTML está diseñado para mostrar información
-            en un navegador web, XML se centra en almacenar y transportar datos
-            de una manera estructurada y legible tanto para humanos como para
-            máquinas.
-          </p>
-          <p>
-            XML es un lenguaje altamente flexible y autodescriptivo, lo que
-            significa que los datos contenidos en un documento XML pueden
-            entenderse sin necesidad de programas adicionales o formatos
-            predefinidos. Su principal ventaja es que permite definir etiquetas
-            personalizadas para organizar la información de acuerdo con las
-            necesidades específicas de cada usuario o aplicación.
-          </p>
-        </article>
-
-        <article id="historia-de-xml-como-empezo-y-porque">
-          <h2>Historia de XML: Cómo empezó y porque</h2>
-          <p>
-            XML (Extensible Markup Language) nació en la decada de 1990 como una
-            solución para estructurar datos de manera universal y compatible
-            entre diferentes plataformas. Su origen se remonta a SGML (Standard
-            Generalized Markup Language), un estándar creado en los años 70 por
-            Charles Goldfarb, Ed Mosher y Ray Lorie en IBM. SGML no era un
-            lenguaje en sí mismo, sino una especificación para definir lenguajes
-            de marcado, de los cuales HTML fue una de sus aplicaciones más
-            conocidas.
-          </p>
-          <p>
-            HTML, aunque ampliamente adoptado, se volvió problemático debido a
-            la falta de disciplina en su implementación, la fragmentación entre
-            navegadores y la mezcla de contenido con presentación. Esto
-            dificultó su uso para estructurar datos de manera eficiente.
-          </p>
-          <p>
-            En respuesta a estas limitaciones, un grupo liderado por Jon Bosak,
-            Tim Bray y James Clark desarrolló XML, con la idea de ofrecer un
-            estándar flexible para almacenar y compartir datos estructurados en
-            cualquier plataforma. XML fue respaldado por el W3C y adoptado
-            rápidamente por la industria, incluyendo a Microsoft, que lo utilizó
-            como base para su estrategia de interoperabilidad con .NET. Aunque
-            XML no pertenece a ninguna empresa, su utilidad ha sido clave para
-            conectar sistemas y facilitar el intercambio de información en
-            múltiples sectores.
-          </p>
-        </article>
-
-        <article id="diferencias-entre-xml-y-html">
-          <h2>Diferencias entre XML y HTML</h2>
-          <p>
-            Aunque XML y HTML son muy parecidos, se diseñaron para cosas
-            distintas y distintas metas en mente:
-          </p>
-          <ul>
-            <li>
-              El diseño de XML está centrado en
-              <strong>TRANSPORTAR</strong> datos, teniendo en consideración y
-              centrándose en que son los datos.
-            </li>
-            <li>
-              En cambio, HTML se ha diseñado para <strong>MOSTRAR</strong> los
-              datos, teniendo en consideración y centrándose en cómo los datos
-              se ven.
-            </li>
-            <li>
-              Las etiquetas XML no están predefinidas como lo son en HTML. Es
-              decir, las etiquetas de HTML están predefinidas para un uso en
-              concreto (H1, Title, ...), mientras que las de XML son
-              personalizables según la necesidad del usuario.
-            </li>
-          </ul>
-        </article>
-
-        <article id="estructura-tree">
-          <h2>Estructura (Tree)</h2>
-          <p>
-            XML organiza la información en una estructura jerárquica en forma de
-            árbol, donde un elemento raíz contiene a los demás elementos
-            anidados. Cada elemento puede tener subelementos, atributos y
-            contenido de texto, lo que permite representar datos de manera clara
-            y estructurada.
-          </p>
-          <pre>
-            empresa
-            └── departamento
-                └── empleado
-                    ├── nombre
-                    └── edad
-                    </pre
-          >
-          <pre>
-            &lt;empresa&gt;  &lt;!-- Elemento raíz --&gt;
-                &lt;departamento&gt;  &lt;!-- Hijo de empresa --&gt;
-                    &lt;empleado&gt;  &lt;!-- Hijo de departamento --&gt;
-                        &lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Hijo de empleado --&gt;
-                        &lt;edad&gt;30&lt;/edad&gt;
-                    &lt;/empleado&gt;
-                &lt;/departamento&gt;
-            &lt;/empresa&gt;
-                    </pre
-          >
-        </article>
-
-        <article id="sintaxis">
-          <h2>Sintaxis</h2>
-          <p>
-            La sintaxis de XML define las reglas que deben seguirse para
-            escribir documentos XML correctamente. Estas reglas aseguran que los
-            datos sean bien estructurados, legibles y procesables por diferentes
-            sistemas.
-          </p>
-          <p><strong>📌 Puntos clave de la sintaxis:</strong></p>
-          <ul>
-            <li>Todas las etiquetas deben cerrarse correctamente.</li>
-            <li>Debes estar correctamente anidadas (sangría).</li>
-            <li>Distingue entre mayúsculas y minúsculas (case-sensitive).</li>
-            <li>Los atributos deben estar entre comillas.</li>
-          </ul>
-          <h3>Declaración del documento XML (Prolog)</h3>
-          <pre>
-            &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-                    </pre
-          >
-          <p>
-            <strong>version="1.0" </strong> indica la versión de XML utilizada
-            en el archivo.
-          </p>
-          <p>
-            <strong>encoding="UTF-8"</strong> especifica la codificación de
-            caracteres que va a utilizar el archivo.
-          </p>
-          <h3>Elementos/etiquetas y atributos</h3>
-          <p>
-            De manera similar a HTML, en XML los elementos/etiquetas son la base
-            del lenguaje y siempre deben tener una etiqueta de apertura y otra
-            de cierre.
-          </p>
-          <pre>
-            &lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Correcto --&gt;
-                    </pre
-          >
-          <p>
-            Tambien pueden autocerrarse si no contienen contenido, como el
-            siguiente ejemplo:
-          </p>
-          <pre>
-            &lt;imagen src="foto.jpg"/&gt;
-                    </pre
-          >
-          <h3>Anidación de elementos</h3>
-          <p>
-            La anidación de elementos en XML se refiere a cómo los elementos
-            pueden contener otros elementos dentro de ellos, creando una
-            estructura jerárquica o en forma de árbol.
-          </p>
-          <pre>
-            &lt;principal&gt;
-              &lt;hijo&gt;
-                &lt;subhijo&gt;....&lt;/subhijo&gt;
-              &lt;/hijo&gt;
-            &lt;/principal&gt;
-                    </pre
-          >
-          <h3>Sensible a mayúsculas y minúsculas</h3>
-          <p>
-            XML es un lenguaje <strong>case-sensitive</strong>, lo que significa
-            que distingue entre mayúsculas y minúsculas.
-          </p>
-          <pre>
-            &lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Elemento 1 --&gt;
-            &lt;NombrE&gt;Juan&lt;/NombrE&gt;  &lt;!-- Elemento 2 --&gt;
-                    </pre
-          >
-          <h3>Atributos en XML</h3>
-          <p>
-            Los atributos son pares de clave-valor que se añaden a las etiquetas
-            para proporcionar información adicional sobre el contenido de los
-            elementos. Los atributos deben estar entre comillas.
-          </p>
-          <pre>
-            &lt;persona nombre="Juan" edad="30" ciudad="Madrid"&gt;
-              &lt;direccion&gt;Calle Falsa 123&lt;/direccion&gt;
-            &lt;/persona&gt;
-                    </pre
-          >
-          <h3>Comentarios en XML</h3>
-          <p>
-            Los comentarios en XML no afectan al contenido, y se encierran entre
-            &lt;!-- y --&gt;.
-          </p>
-          <pre>
-            &lt;!-- Este es un comentario que no afecta al contenido --&gt;
-            &lt;persona&gt;
-                &lt;nombre&gt;Juan&lt;/nombre&gt;
-            &lt;/persona&gt;
-                    </pre
-          >
-        </article>
-
-        <article id="webgrafia">
-          <h2>Webgrafía</h2>
-          <p>Fuentes consultadas:</p>
-          <ul>
-            <li>
-              <a href="https://www.w3.org/TR/xml/" target="_blank">W3C: XML</a>
-            </li>
-            <li><a href="https://www.xml.com" target="_blank">XML.com</a></li>
-          </ul>
-        </article>
-
-        <div class="navegacion">
-          <!-- Botón para ir al anterior punto -->
-          <a href="../semana1.html" class="btn-siguiente">
-            &larr; Volver a la Semana 1
-          </a>
-        
-          <!-- Botón para ir al siguiente punto -->
-          <a href="../Puntos/02_etiquetas.html" class="btn-siguiente">
-            Ir al siguiente punto &rarr;
-          </a>
+    <main class="container my-4 flex-grow-1">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-lg-3">
+          <div class="sticky-top pt-3">
+            <div class="card mb-4">
+              <div class="card-body">
+                <h2 class="h5">Secciones</h2>
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#que-es-xml">¿Qué es XML?</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#historia-de-xml-como-empezo-y-porque">Historia de XML</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#diferencias-entre-xml-y-html">Diferencias XML/HTML</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#estructura-tree">Estructura (Tree)</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#sintaxis">Sintaxis</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#webgrafia">Webgrafía</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+
+        <!-- Contenido principal -->
+        <div class="col-lg-9">
+          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+            <h2 class="text-center mb-4">Introducción a XML</h2>
+            
+            <article id="que-es-xml" class="mb-5">
+              <h2 class="h3">¿Que es XML?</h2>
+              <p>
+                XML es el acrónimo de "eXtensible Markup Language", que en español
+                significa Lenguaje de Marcas Extensible. Se trata de un lenguaje de
+                marcado con una estructura similar a HTML, pero con un enfoque
+                diferente. Mientras que HTML está diseñado para mostrar información
+                en un navegador web, XML se centra en almacenar y transportar datos
+                de una manera estructurada y legible tanto para humanos como para
+                máquinas.
+              </p>
+              <p>
+                XML es un lenguaje altamente flexible y autodescriptivo, lo que
+                significa que los datos contenidos en un documento XML pueden
+                entenderse sin necesidad de programas adicionales o formatos
+                predefinidos. Su principal ventaja es que permite define etiquetas
+                personalizadas para organizar la información de acuerdo con las
+                necesidades específicas de cada usuario o aplicación.
+              </p>
+            </article>
+
+            <article id="historia-de-xml-como-empezo-y-porque" class="mb-5">
+              <h2 class="h3">Historia de XML: Cómo empezó y porque</h2>
+              <p>
+                XML (Extensible Markup Language) nació en la decada de 1990 como una
+                solución para estructurar datos de manera universal y compatible
+                entre diferentes plataformas. Su origen se remonta a SGML (Standard
+                Generalized Markup Language), un estándar creado en los años 70 por
+                Charles Goldfarb, Ed Mosher y Ray Lorie en IBM. SGML no era un
+                lenguaje en sí mismo, sino una especificación para definir lenguajes
+                de marcado, de los cuales HTML fue una de sus aplicaciones más
+                conocidas.
+              </p>
+              <p>
+                HTML, aunque ampliamente adoptado, se volvió problemático debido a
+                la falta de disciplina en su implementación, la fragmentación entre
+                navegadores y la mezcla de contenido con presentación. Esto
+                dificultó su uso para estructurar datos de manera eficiente.
+              </p>
+              <p>
+                En respuesta a estas limitaciones, un grupo liderado por Jon Bosak,
+                Tim Bray y James Clark desarrolló XML, con la idea de ofrecer un
+                estándar flexible para almacenar y compartir datos estructurados en
+                cualquier plataforma. XML fue respaldado por el W3C y adoptado
+                rápidamente por la industria, incluyendo a Microsoft, que lo utilizó
+                como base para su estrategia de interoperabilidad con .NET. Aunque
+                XML no pertenece a ninguna empresa, su utilidad ha sido clave para
+                conectar sistemas y facilitar el intercambio de información en
+                múltiples sectores.
+              </p>
+            </article>
+
+            <article id="diferencias-entre-xml-y-html" class="mb-5">
+              <h2 class="h3">Diferencias entre XML y HTML</h2>
+              <p>
+                Aunque XML y HTML son muy parecidos, se diseñaron para cosas
+                distintas y distintas metas en mente:
+              </p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  El diseño de XML está centrado en
+                  <strong>TRANSPORTAR</strong> datos, teniendo en consideración y
+                  centrándose en que son los datos.
+                </li>
+                <li class="list-group-item">
+                  En cambio, HTML se ha diseñado para <strong>MOSTRAR</strong> los
+                  datos, teniendo en consideración y centrándose en cómo los datos
+                  se ven.
+                </li>
+                <li class="list-group-item">
+                  Las etiquetas XML no están predefinidas como lo son en HTML. Es
+                  decir, las etiquetas de HTML están predefinidas para un uso en
+                  concreto (H1, Title, ...), mientras que las de XML son
+                  personalizables según la necesidad del usuario.
+                </li>
+              </ul>
+            </article>
+
+            <article id="estructura-tree" class="mb-5">
+              <h2 class="h3">Estructura (Tree)</h2>
+              <p>
+                XML organiza la información en una estructura jerárquica en forma de
+                árbol, donde un elemento raíz contiene a los demás elementos
+                anidados. Cada elemento puede tener subelementos, atributos y
+                contenido de texto, lo que permite representar datos de manera clara
+                y estructurada.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>empresa
+└── departamento
+    └── empleado
+        ├── nombre
+        └── edad</code></pre>
+              <pre class="bg-light p-3 rounded"><code>&lt;empresa&gt;  &lt;!-- Elemento raíz --&gt;
+    &lt;departamento&gt;  &lt;!-- Hijo de empresa --&gt;
+        &lt;empleado&gt;  &lt;!-- Hijo de departamento --&gt;
+            &lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Hijo de empleado --&gt;
+            &lt;edad&gt;30&lt;/edad&gt;
+        &lt;/empleado&gt;
+    &lt;/departamento&gt;
+&lt;/empresa&gt;</code></pre>
+            </article>
+
+            <article id="sintaxis" class="mb-5">
+              <h2 class="h3">Sintaxis</h2>
+              <p>
+                La sintaxis de XML define las reglas que deben seguirse para
+                escribir documentos XML correctamente. Estas reglas aseguran que los
+                datos sean bien estructurados, legibles y procesables por diferentes
+                sistemas.
+              </p>
+              <p><strong>📌 Puntos clave de la sintaxis:</strong></p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">Todas las etiquetas deben cerrarse correctamente.</li>
+                <li class="list-group-item">Debes estar correctamente anidadas (sangría).</li>
+                <li class="list-group-item">Distingue entre mayúsculas y minúsculas (case-sensitive).</li>
+                <li class="list-group-item">Los atributos deben estar entre comillas.</li>
+              </ul>
+              
+              <h3 class="h4">Declaración del documento XML (Prolog)</h3>
+              <pre class="bg-light p-3 rounded"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+              <p>
+                <strong>version="1.0" </strong> indica la versión de XML utilizada
+                en el archivo.
+              </p>
+              <p>
+                <strong>encoding="UTF-8"</strong> especifica la codificación de
+                caracteres que va a utilizar el archivo.
+              </p>
+              
+              <h3 class="h4">Elementos/etiquetas y atributos</h3>
+              <p>
+                De manera similar a HTML, en XML los elementos/etiquetas son la base
+                del lenguaje y siempre deben tener una etiqueta de apertura y otra
+                de cierre.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Correcto --&gt;</code></pre>
+              <p>
+                Tambien pueden autocerrarse si no contienen contenido, como el
+                siguiente ejemplo:
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;imagen src="foto.jpg"/&gt;</code></pre>
+              
+              <h3 class="h4">Anidación de elementos</h3>
+              <p>
+                La anidación de elementos en XML se refiere a cómo los elementos
+                pueden contener otros elementos dentro de ellos, creando una
+                estructura jerárquica o en forma de árbol.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;principal&gt;
+  &lt;hijo&gt;
+    &lt;subhijo&gt;....&lt;/subhijo&gt;
+  &lt;/hijo&gt;
+&lt;/principal&gt;</code></pre>
+              
+              <h3 class="h4">Sensible a mayúsculas y minúsculas</h3>
+              <p>
+                XML es un lenguaje <strong>case-sensitive</strong>, lo que significa
+                que distingue entre mayúsculas y minúsculas.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;nombre&gt;Juan&lt;/nombre&gt;  &lt;!-- Elemento 1 --&gt;
+&lt;NombrE&gt;Juan&lt;/NombrE&gt;  &lt;!-- Elemento 2 --&gt;</code></pre>
+              
+              <h3 class="h4">Atributos en XML</h3>
+              <p>
+                Los atributos son pares de clave-valor que se añaden a las etiquetas
+                para proporcionar información adicional sobre el contenido de los
+                elementos. Los atributos deben estar entre comillas.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;persona nombre="Juan" edad="30" ciudad="Madrid"&gt;
+  &lt;direccion&gt;Calle Falsa 123&lt;/direccion&gt;
+&lt;/persona&gt;</code></pre>
+              
+              <h3 class="h4">Comentarios en XML</h3>
+              <p>
+                Los comentarios en XML no afectan al contenido, y se encierran entre
+                &lt;!-- y --&gt;.
+              </p>
+              <pre class="bg-light p-3 rounded"><code>&lt;!-- Este es un comentario que no afecta al contenido --&gt;
+&lt;persona&gt;
+    &lt;nombre&gt;Juan&lt;/nombre&gt;
+&lt;/persona&gt;</code></pre>
+            </article>
+
+            <article id="webgrafia">
+              <h2 class="h3">Webgrafía</h2>
+              <p>Fuentes consultadas:</p>
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  <a href="https://www.w3.org/TR/xml/" target="_blank" class="text-decoration-none">W3C: XML</a>
+                </li>
+                <li class="list-group-item"><a href="https://www.xml.com" target="_blank" class="text-decoration-none">XML.com</a></li>
+              </ul>
+            </article>
+
+            <div class="d-flex justify-content-between mt-5">
+              <a href="../semana1.html" class="btn btn-primary">
+                &larr; Volver a la Semana 1
+              </a>
+              <a href="../Puntos/02_etiquetas.html" class="btn btn-primary">
+                Ir al siguiente punto &rarr;
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <p>&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-light py-3 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+      </div>
     </footer>
 
-    <button id="btnSubir" class="btn-subir">▲</button>
+    <!-- Botón para ir arriba -->
+    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
 
-    <script src="../../../js/navbar.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../../js/scrollToTop.js"></script>
-
   </body>
 </html>
