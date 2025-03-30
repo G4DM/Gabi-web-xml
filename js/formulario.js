@@ -1,5 +1,5 @@
 // Ruta del archivo XML
-const rutaXML = '/data/forms/contactForm.xml';
+const rutaXML = '/Gabi-web-xml/data/forms/contactForm.xml';
 
 // Función para cargar y procesar el archivo XML
 fetch(rutaXML)
