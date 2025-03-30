@@ -1,70 +1,106 @@
-.parent {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
-    gap: 16px;
-    padding: 20px;
-    max-width: 900px; /* Limita el ancho total */
-    margin: 0 auto; /* Centrar el grid en la página */
+/* usuario.css - Complete Styles for User Cards */
+
+/* Main container - uses Bootstrap grid */
+#contenido {
+    padding: 20px 0;
+}
+
+/* User card styling - complements Bootstrap */
+.usuario {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Card hover effects */
+.usuario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+/* Card title */
+.usuario h2.card-title {
+    color: #8b4513; /* Brown color */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Card text */
+.usuario .card-text {
+    color: #495057;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Social media section */
+.usuario h5 {
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Social media links list */
+.usuario .list-unstyled {
+    padding-left: 0;
+}
+
+.usuario .list-unstyled li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Social media icons */
+.usuario .fab {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+    color: #8b4513;
+}
+
+/* Links styling */
+.usuario a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    display: inline-block;
+}
+
+.usuario a:hover {
+    color: #8b4513;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .usuario {
+        margin-bottom: 1.5rem;
+    }
     
+    .usuario h2.card-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animation for card loading */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .usuario {
-    background: rgba(255, 255, 255, 0.9);
-    border: 2px solid #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 100%; /* Ocupa toda la celda de la grid */
-    max-width: 550px; /* Aumenta el ancho máximo de las tarjetas */
-    height: 450px;
-    max-height: 450px;
-    margin: auto; /* Centrar si son menos de 3 */
+    animation: fadeIn 0.5s ease forwards;
 }
 
-.usuario ul {
-    list-style: none; /* Elimina los puntos de la lista */
-}
-
-.usuario li {
-    margin: 10px 0; /* Espaciado entre los elementos de la lista */
-    font-size: 1.2em;
-    color: #333;
-}
-
-
-.usuario h2 {
-    margin: 0 0 15px;
-    color: brown;
-    font-size: 1.8em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.usuario p {
-    margin: 10px 0;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.usuario p strong {
-    color: brown;
-}
-
-a {
-    color: brown;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-.fila {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    padding-top: 32px;
-}
+/* Delay animations for each card */
+.usuario:nth-child(1) { animation-delay: 0.1s; }
+.usuario:nth-child(2) { animation-delay: 0.2s; }
+.usuario:nth-child(3) { animation-delay: 0.3s; }
+.usuario:nth-child(4) { animation-delay: 0.4s; }
+.usuario:nth-child(5) { animation-delay: 0.5s; }

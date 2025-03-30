@@ -1,5 +1,5 @@
 // Ruta del archivo XML
-const rutaXML = '../data/forms/contactForm.xml';
+const rutaXML = '../../data/forms/contactForm.xml';
 
 // Función para cargar y procesar el archivo XML
 fetch(rutaXML)
@@ -12,45 +12,42 @@ fetch(rutaXML)
         const usuarios = xmlDoc.getElementsByTagName("Usuario");
         const contenidoDiv = document.getElementById("contenido");
 
-        let fila; // Contenedor para agrupar 3 tarjetas
-
         for (let i = 0; i < usuarios.length; i++) {
-            if (i % 3 === 0) {
-                // Crear una nueva fila cada 3 usuarios
-                fila = document.createElement("div");
-                fila.className = "fila";
-                contenidoDiv.appendChild(fila);
-            }
-
             const usuario = usuarios[i];
 
             // Extraer datos del usuario
             const nombre = usuario.getElementsByTagName("Nombre")[0]?.textContent || "Sin nombre";
             const apellidos = usuario.getElementsByTagName("Apellidos")[0]?.textContent || "Sin apellidos";
             const descripcion = usuario.getElementsByTagName("Descripcion")[0]?.textContent || "Sin descripción";
-            const twitter = usuario.getElementsByTagName("Twitter")[0]?.textContent || "#";
-            const instagram = usuario.getElementsByTagName("Instagram")[0]?.textContent || "#";
-            const linkedin = usuario.getElementsByTagName("LinkedIn")[0]?.textContent || "#";
-            const github = usuario.getElementsByTagName("GitHub")[0]?.textContent || "#";
+            
+            // Access social media links through the RedesSociales parent element
+            const redesSociales = usuario.getElementsByTagName("RedesSociales")[0];
+            const twitter = redesSociales?.getElementsByTagName("Twitter")[0]?.textContent || "#";
+            const instagram = redesSociales?.getElementsByTagName("Instagram")[0]?.textContent || "#";
+            const linkedin = redesSociales?.getElementsByTagName("LinkedIn")[0]?.textContent || "#";
+            const github = redesSociales?.getElementsByTagName("GitHub")[0]?.textContent || "#";
 
-            // Crear el contenido HTML para el usuario
+            // Crear el contenido HTML para el usuario usando Bootstrap card classes
             const usuarioDiv = document.createElement("div");
-            usuarioDiv.className = "usuario";
-
+            usuarioDiv.className = "col-md-4 mb-4"; // Bootstrap grid classes
             usuarioDiv.innerHTML = `
-                <h2>${nombre} ${apellidos}</h2>
-                <p>${descripcion}</p>
-                <h3>Redes Sociales</h3>
-                <ul>
-                    <li><strong><i class="fab fa-twitter"></i></strong> <a href="${twitter}" target="_blank">Sigueme en X</a></li>
-                    <li><strong><i class="fab fa-instagram"></i></strong> <a href="${instagram}" target="_blank">Sigueme en Instagram</a></li>
-                    <li><strong><i class="fab fa-linkedin"></i></strong> <a href="${linkedin}" target="_blank">Ir a LinkedIn</a></li>
-                    <li><strong><i class="fab fa-github"></i></strong> <a href="${github}" target="_blank">Ver mi GitHub</a></li>
-                </ul>
+                <div class="card usuario h-100">
+                    <div class="card-body">
+                        <h2 class="card-title">${nombre} ${apellidos}</h2>
+                        <p class="card-text">${descripcion}</p>
+                        <h5 class="mt-3">Redes Sociales</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="${twitter}" target="_blank" class="text-decoration-none"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                            <li class="mb-2"><a href="${instagram}" target="_blank" class="text-decoration-none"><i class="fab fa-instagram me-2"></i>Instagram</a></li>
+                            <li class="mb-2"><a href="${linkedin}" target="_blank" class="text-decoration-none"><i class="fab fa-linkedin me-2"></i>LinkedIn</a></li>
+                            <li><a href="${github}" target="_blank" class="text-decoration-none"><i class="fab fa-github me-2"></i>GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
             `;
 
-            // Añadir la tarjeta a la fila actual
-            fila.appendChild(usuarioDiv);
+            // Añadir la tarjeta al contenedor
+            contenidoDiv.appendChild(usuarioDiv);
         }
     })
     .catch(error => console.error('Error al cargar el archivo XML:', error));
