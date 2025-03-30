@@ -71,4 +71,4 @@ Creative Commons - Uso educativo
 
 ---
 
-*Proyecto para IES Serra Perenxisa - DAW 2023/2024*
+*Proyecto para IES Serra Perenxisa - DAW 2024/2025*
