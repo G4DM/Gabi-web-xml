@@ -1,18 +1,74 @@
-# Explicando XML y Otros Formatos de Datos: YAML, JSON & Markdown
+# (Individual) web-xml: Proyecto Individual sobre XML y Formatos de Datos
 
-## Acerca de este Proyecto
+![Banner del Proyecto (Generado con IA)](assets/img/banner.png)
 
-Este proyecto es un **trabajo colaborativo** realizado entre compañeros de clase de **1º de Desarrollo de Aplicaciones Web (DAW)**. Durante este tercer trimestre, hemos trabajado juntos para desarrollar esta página web, buscando y compartiendo conocimientos y habilidades adquiridas en nuestras clases de **programación, diseño web y trabajo en equipo**.
+## Descripción del Proyecto
+Este proyecto es un **fork individual** para el módulo de **Lenguaje de Marcas & Sistemas de Gestión de Información** del **1º de DAW** en el **IES Serra Perenxisa**.
 
-Cada miembro del equipo ha contribuido en diferentes aspectos del desarrollo, desde la **creación del contenido y búsqueda de información** hasta la **implementación del diseño y la programación**, utilizando herramientas y tecnologías como **HTML**, **CSS**, **Bootstrap**, algo de **JavaScript** (en menor medida para interactividad y funcionalidades específicas), **GitHub**, y más.
+## Tecnologías Utilizadas
+```
+- HTML5
+- CSS3/Bootstrap
+- JavaScript
+- XML
+- Markdown
+```
 
-## Objetivo del Proyecto
+## Contenido por Semanas
 
-El objetivo de este trabajo es aplicar lo aprendido en las clases de **desarrollo web** y otros aspectos del curso, a través de la creación de una web que expone y explica de manera detallada los siguientes formatos:
+### Semana 1: Introducción a XML
+```
+- Historia de XML
+- Sintaxis básica
+- Elementos y atributos
+```
 
-- **XML**
-- **YAML**
-- **JSON**
-- **Markdown**
+### Semana 2: XML Avanzado
+```
+- Namespaces
+- XSD
+- XSLT
+```
 
-A lo largo del proceso, no solo hemos profundizado en la teoría detrás de estos formatos, sino que también hemos enfocado nuestros esfuerzos en **enseñar a los demás** cómo y por qué se utilizan en el desarrollo web y en otros contextos.
+### Semana 3: Validación
+```
+- DTD
+- Parsers
+- Aplicaciones
+```
+
+### Semana 4: Alternativas
+```
+- YAML
+- JSON
+- Markdown
+```
+
+## Ejemplo de Implementación XML
+Archivo `contactForm.xml`:
+```
+<Formulario>
+  <Usuario>
+    <Nombre>Ejemplo</Nombre>
+    <Email>ejemplo@test.com</Email>
+  </Usuario>
+</Formulario>
+```
+
+## Cómo Usar
+1. Clona el repositorio:
+```git clone https://github.com/tu-usuario/gabi-web-xml```
+
+2. Abre en tu navegador:
+```index.html```
+
+## ¿No puedes clonar?
+
+1. Para poder visualizar la web, simplemente [haz click aquí.](https://g4dm.github.io/Gabi-web-xml/)
+
+## Licencia
+Creative Commons - Uso educativo
+
+---
+
+*Proyecto para IES Serra Perenxisa - DAW 2023/2024*
