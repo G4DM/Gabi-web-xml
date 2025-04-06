@@ -1,37 +1,94 @@
-/* Estilos específicos para páginas de contenido - Complementan Bootstrap */
-
-/* Header */
-header.bg-gradient {
-  background: linear-gradient(135deg, #d5bdaf, #d6ccc2);
-  color: #333;
-  margin-top: 56px; /* Compensa el navbar fijo */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* Estilos específicos para páginas de contenido - Versión mejorada con paleta original */
+:root {
+  --primary-bg: #d5bdaf;
+  --secondary-bg: #f5ebe0;
+  --accent-color: #8b7d6b;
+  --hover-color: #5a4a42;
+  --card-bg: #faf1e9;
+  --card-border: #d6ccc2;
+  --text-dark: #333;
+  --text-light: #555;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+  --transition-speed: 0.3s;
+  --border-radius: 12px;
 }
 
-/* Contenido principal */
+/* Header mejorado */
+.week-header {
+  background: linear-gradient(135deg, var(--primary-bg), var(--accent-color));
+  padding: 8rem 0 10rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 56px;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.wave-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23f5ebe0" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+  background-size: cover;
+}
+
+/* Contenido principal mejorado */
 .content {
-  background-color: #f5ebe0;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(139, 125, 107, 0.1);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(2px);
 }
 
 article {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: #f9f7f2;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background-color: var(--secondary-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(139, 125, 107, 0.15);
+}
+
+/* Títulos mejorados */
 article h2, article h3, article h4 {
-  color: #8b7d6b;
+  color: var(--accent-color);
+  font-weight: 600;
+  position: relative;
 }
 
 article h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-  border-bottom: 1px solid #d5bdaf;
-  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+article h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-color), var(--hover-color));
+  border-radius: 3px;
 }
 
 article h3 {
@@ -46,122 +103,293 @@ article h4 {
   margin-bottom: 0.8rem;
 }
 
-/* Preformatted code blocks */
-pre {
-  background-color: #f8f9fa;
-  border-radius: 4px;
-  padding: 1rem;
-  overflow-x: auto;
+/* Bloques de código mejorados */
+.code-block {
+  position: relative;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all var(--transition-speed) ease;
 }
 
-code {
-  color: #d63384;
-  background-color: rgba(214, 51, 132, 0.1);
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
+.code-block:hover {
+  box-shadow: 0 8px 20px rgba(139, 125, 107, 0.15);
 }
 
-/* Tablas */
-.table {
-  margin: 1.5rem 0;
-}
-
-.table thead th {
-  background-color: #d5bdaf;
-  color: #333;
-}
-
-/* Botón para ir arriba */
-.btn-subir {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+.btn-copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(245, 235, 224, 0.9);
+  color: var(--accent-color);
   border: none;
   border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   opacity: 0;
-  transition: opacity 0.4s ease-in-out;
+  transform: translateY(-5px);
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.code-block:hover .btn-copy {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-copy:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-copy.copied {
+  background-color: var(--success-color);
+  color: white;
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.btn-copy.error {
+  background-color: var(--error-color);
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
+}
+
+/* Animación de iconos de copiar */
+.btn-copy i {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  position: absolute;
+}
+
+.btn-copy .fa-copy {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.btn-copy .fa-check {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+}
+
+.btn-copy .fa-times {
+  opacity: 0;
+  transform: scale(0) rotate(180deg);
+}
+
+.btn-copy.copied .fa-copy {
+  opacity: 0;
+  transform: scale(0) rotate(180deg);
+}
+
+.btn-copy.copied .fa-check {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.btn-copy.error .fa-copy {
+  opacity: 0;
+  transform: scale(0) rotate(-180deg);
+}
+
+.btn-copy.error .fa-times {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+pre {
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--card-border);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+}
+
+pre::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-color), var(--hover-color));
+}
+
+code {
+  color: #8b5a44;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-weight: 500;
+}
+
+/* Sidebar mejorado */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 5px 15px rgba(139, 125, 107, 0.05);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(139, 125, 107, 0.1);
+}
+
+.nav.flex-column .nav-link {
+  color: var(--text-dark);
+  padding: 0.75rem 1.25rem;
+  margin: 0.25rem 0;
+  border-radius: 8px;
+  transition: all var(--transition-speed) ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav.flex-column .nav-link:hover,
+.nav.flex-column .nav-link:focus {
+  background-color: rgba(213, 189, 175, 0.3);
+  color: var(--hover-color);
+  transform: translateX(5px);
+}
+
+.nav.flex-column .nav-link.active {
+  background-color: var(--accent-color);
+  color: white !important;
+  font-weight: 600;
+}
+
+.nav.flex-column .nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--hover-color);
+}
+
+/* Botón ir arriba mejorado */
+.btn-subir {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 5px 15px rgba(139, 125, 107, 0.3);
   z-index: 99;
 }
 
 .btn-subir:hover {
-  transform: scale(1.05);
+  background-color: var(--hover-color);
+  transform: translateY(-3px) scale(1.05);
 }
 
 .btn-subir.mostrar {
   opacity: 1;
+  visibility: visible;
 }
 
-/* Navegación entre páginas */
-.navegacion {
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-bg);
+  z-index: 9999;
   display: flex;
-  justify-content: space-between;
-  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
-/* Sidebar */
-.card {
-  border: 1px solid #d5bdaf;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.card-body {
-  padding: 1.25rem;
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border-width: 0.25em;
+  color: var(--accent-color);
 }
 
-.nav.flex-column .nav-link {
-  color: #333;
-  padding: 0.5rem 1rem;
-  margin: 0.2rem 0;
-  border-radius: 4px;
-  transition: all 0.3s;
-}
-
-.nav.flex-column .nav-link:hover {
-  background-color: #d5bdaf;
-  color: white;
-}
-
-/* Responsividad */
+/* Responsividad mejorada */
 @media (max-width: 992px) {
-  .sidebar {
-      margin-bottom: 2rem;
+  .week-header {
+    padding: 6rem 0 8rem;
+  }
+  
+  article {
+    padding: 1.75rem;
   }
 }
 
 @media (max-width: 768px) {
-  article {
-      padding: 1rem;
+  .week-header {
+    padding: 5rem 0 7rem;
   }
   
   article h2 {
-      font-size: 1.6rem;
+    font-size: 1.75rem;
   }
   
-  article h3 {
-      font-size: 1.4rem;
+  .btn-subir {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
   }
 }
 
 @media (max-width: 576px) {
-  .content {
-      padding: 1rem;
+  .week-header {
+    padding: 4rem 0 6rem;
+  }
+  
+  article {
+    padding: 1.5rem;
   }
   
   article h2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
   
   .btn-subir {
-      width: 40px;
-      height: 40px;
-      font-size: 16px;
+    width: 40px;
+    height: 40px;
   }
 }

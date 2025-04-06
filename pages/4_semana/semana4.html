@@ -6,21 +6,32 @@
     <title>Semana 4</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Library for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Tus estilos -->
     <link rel="stylesheet" href="../../css/main.css" />
     <link rel="stylesheet" href="../../css/semanas.css" />
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+    
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../../index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../../index.html">Inicio</a>
             </li>
@@ -93,86 +104,98 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4">
-      <div class="container text-center py-4">
-        <h1 class="display-4 fw-bold">Semana 4</h1>
-        <p class="lead">Otros lenguajes de marcado</p>
+    <header class="week-header position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-index-1 py-5 text-center" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">Semana 4</h1>
+        <p class="lead fs-3 text-white">Otros lenguajes de marcado</p>
+      </div>
+      <div class="wave-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
       </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
-      <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
-        <h2 class="text-center mb-4">Puntos principales de esta semana</h2>
-        <p class="text-center mb-5 fs-5">Recomendable ir en orden</p>
+    <main class="container my-5 flex-grow-1">
+      <section class="content p-5 bg-white rounded-4 shadow mb-5" data-aos="fade-up">
+        <h2 class="text-center mb-4 fw-bold">Puntos principales de esta semana</h2>
+        <p class="text-center mb-5 fs-5 text-muted">Recomendable ir en orden</p>
 
         <div class="row g-4">
           <!-- Punto 12 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 point-card">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm point-card">
+              <div class="card-header bg-primary text-white text-center py-3">
+                <i class="fas fa-file-code fs-3 mb-2"></i>
+                <h4 class="fw-bold mb-0">Punto 12</h4>
+              </div>
               <div class="card-body">
                 <h3 class="card-title h5 text-center">
-                  <a href="./Puntos/12_yaml.html" class="text-decoration-none">Punto 12 - Otros lenguajes: YAML</a>
+                  <a href="./Puntos/12_yaml.html" class="text-decoration-none">YAML</a>
                 </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2">Introducción</li>
-                  <li class="mb-2">Características Principales de YAML</li>
-                  <li class="mb-2">Ventajas de Usar YAML</li>
-                  <li class="mb-2">Comparativa con Otros Lenguajes</li>
-                  <li class="mb-2">Ejemplos Prácticos de YAML</li>
+                <ul class="list-unstyled mt-3 point-list">
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-primary"></i>Introducción</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-primary"></i>Características Principales</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-primary"></i>Ventajas de Usar YAML</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-primary"></i>Comparativa con Otros Lenguajes</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-primary"></i>Ejemplos Prácticos</li>
                 </ul>
+                <div class="text-center mt-3">
+                  <a href="./Puntos/12_yaml.html" class="btn btn-sm btn-outline-primary">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
           
           <!-- Punto 13 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 point-card">
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm point-card">
+              <div class="card-header bg-success text-white text-center py-3">
+                <i class="fas fa-file-code fs-3 mb-2"></i>
+                <h4 class="fw-bold mb-0">Punto 13</h4>
+              </div>
               <div class="card-body">
                 <h3 class="card-title h5 text-center">
-                  <a href="./Puntos/13_json.html" class="text-decoration-none">Punto 13 - Otros lenguajes: JSON</a>
+                  <a href="./Puntos/13_json.html" class="text-decoration-none">JSON</a>
                 </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2">Fundamentos Conceptuales</li>
-                  <li class="mb-2">Modelo Teórico de JSON</li>
-                  <li class="mb-2">Gramática Formal</li>
-                  <li class="mb-2">Teoría de Tipos en JSON</li>
-                  <li class="mb-2">Modelo de Seguridad Formal</li>
-                  <li class="mb-2">Teoría de la información</li>
+                <ul class="list-unstyled mt-3 point-list">
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Fundamentos Conceptuales</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Modelo Teórico</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Gramática Formal</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Teoría de Tipos</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Modelo de Seguridad</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-success"></i>Teoría de la información</li>
                 </ul>
+                <div class="text-center mt-3">
+                  <a href="./Puntos/13_json.html" class="btn btn-sm btn-outline-success">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
           
           <!-- Punto 14 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 point-card">
-              <div class="card-body">
-                <h3 class="card-title h5 text-center">
-                  <a href="./Puntos/14_markdown.html" class="text-decoration-none">Punto 14 - Otros lenguajes: Markdown</a>
-                </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2">¿Qué es Markdown?</li>
-                  <li class="mb-2">Encabezados</li>
-                  <li class="mb-2">Énfasis</li>
-                  <li class="mb-2">Listas</li>
-                  <li class="mb-2">Bloques de código</li>
-                  <li class="mb-2">Enlaces</li>
-                  <li class="mb-2">Imágenes</li>
-                </ul>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm point-card">
+              <div class="card-header bg-info text-white text-center py-3">
+                <i class="fas fa-file-code fs-3 mb-2"></i>
+                <h4 class="fw-bold mb-0">Punto 14</h4>
               </div>
-            </div>
-          </div>
-          
-          <!-- Ejercicios -->
-          <div class="col-md-6 col-lg-4">
-            <div class="card h-100 point-card">
               <div class="card-body">
                 <h3 class="card-title h5 text-center">
-                  <a href="./Puntos/04_ejercicios.html" class="text-decoration-none">04 Ejercicios</a>
+                  <a href="./Puntos/14_markdown.html" class="text-decoration-none">Markdown</a>
                 </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2">Ejercicios para practicar los conceptos aprendidos esta semana</li>
+                <ul class="list-unstyled mt-3 point-list">
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>¿Qué es Markdown?</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>Encabezados</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>Énfasis</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>Listas</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>Bloques de código</li>
+                  <li class="mb-2"><i class="fas fa-angle-right me-2 text-info"></i>Enlaces e imágenes</li>
                 </ul>
+                <div class="text-center mt-3">
+                  <a href="./Puntos/14_markdown.html" class="btn btn-sm btn-outline-info">Ver más</a>
+                </div>
               </div>
             </div>
           </div>
@@ -180,13 +203,47 @@
       </section>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 text-center text-lg-start">
+            <h5 class="mb-3">Curso XML</h5>
+            <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado.</p>
+            <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+              <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+              <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center text-lg-start">
+            <h5 class="mb-3">Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="../../index.html" class="text-white text-decoration-none">Inicio</a></li>
+              <li class="mb-2"><a href="../1_semana/semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+              <li class="mb-2"><a href="../2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+              <li class="mb-2"><a href="../3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+              <li class="mb-2"><a href="./semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="../../js/main.js"></script>
   </body>
 </html>

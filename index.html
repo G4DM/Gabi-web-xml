@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Curso XML</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Library for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Tus estilos (ahora deben ir después de Bootstrap para poder sobrescribir) -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
-  </head>
-  <body class="d-flex flex-column min-vh-100">
+</head>
+<body class="d-flex flex-column min-vh-100">
+<!-- Preloader -->
+<div id="preloader">
+    <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+    </div>
+</div>
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="./index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+        <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link active" href="./index.html">Inicio</a>
             </li>
@@ -93,97 +107,214 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4 text-center bg-gradient">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold">XML</h1>
-        <p class="lead fs-3">Aprende lo básico de XML en tan solo 4 semanas</p>
-      </div>
+    <header class="hero-section position-relative">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative z-index-1 py-5">
+        <div class="row min-vh-75 align-items-center">
+        <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right" data-aos-delay="100">
+            <h1 class="display-3 fw-bold text-white">Domina <span class="highlight">XML</span></h1>
+            <p class="lead fs-3 text-white mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado</p>
+            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+            <a href="#course-content" class="btn btn-primary btn-lg fw-medium">Comenzar ahora <i class="fas fa-arrow-right ms-2"></i></a>
+            <a href="./pages/formulario.html" class="btn btn-outline-light btn-lg fw-medium">Contactar</a>
+            </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-delay="300">
+            <div class="hero-image-container">
+            <img src="./assets/img/banner.png" alt="XML Course" class="img-fluid rounded-3 shadow-lg">
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="wave-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
-      <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
-        <h2 class="text-center mb-4">Conceptos repartidos en 4 semanas de aprendizaje</h2>
-        <p class="text-center mb-5 fs-5">Empiezas desde lo más básico hasta cosas más avanzadas</p>
+    <main class="container my-5 flex-grow-1">
+    <!-- Features Section -->
+    <section class="features-section mb-5" data-aos="fade-up">
+        <div class="text-center mb-5">
+        <h2 class="h2 fw-bold">¿Por qué estudiar XML?</h2>
+        <p class="lead text-muted">Beneficios de aprender este lenguaje de marcado</p>
+        </div>
+        <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card text-center p-4">
+            <div class="feature-icon bg-primary-subtle rounded-circle mx-auto mb-4">
+                <i class="fas fa-universal-access text-primary"></i>
+            </div>
+            <h3 class="h5 mb-3">Universalidad</h3>
+            <p class="text-muted">Formato universal para intercambio de datos compatible con múltiples sistemas</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card text-center p-4">
+            <div class="feature-icon bg-success-subtle rounded-circle mx-auto mb-4">
+                <i class="fas fa-sitemap text-success"></i>
+            </div>
+            <h3 class="h5 mb-3">Estructurado</h3>
+            <p class="text-muted">Organiza la información de manera jerárquica para facilitar su procesamiento</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card text-center p-4">
+            <div class="feature-icon bg-danger-subtle rounded-circle mx-auto mb-4">
+                <i class="fas fa-check-double text-danger"></i>
+            </div>
+            <h3 class="h5 mb-3">Validación</h3>
+            <p class="text-muted">Sistema integrado de validación para garantizar la integridad de los datos</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card text-center p-4">
+            <div class="feature-icon bg-info-subtle rounded-circle mx-auto mb-4">
+                <i class="fas fa-industry text-info"></i>
+            </div>
+            <h3 class="h5 mb-3">Empleabilidad</h3>
+            <p class="text-muted">Habilidad demandada en múltiples sectores tecnológicos y empresariales</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="course-content" class="content p-5 bg-white rounded-4 shadow mb-5" data-aos="fade-up">
+        <h2 class="text-center mb-4 fw-bold">Conceptos repartidos en 4 semanas de aprendizaje</h2>
+        <p class="text-center mb-5 fs-5 text-muted">Empiezas desde lo más básico hasta cosas más avanzadas</p>
 
         <div class="row g-4">
-          <!-- Semana 1 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body">
+        <!-- Semana 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm course-card">
+            <div class="card-header bg-primary text-white text-center py-3">
+                <i class="fas fa-book-open fs-3 mb-2"></i>
+                <h4 class="fw-bold mb-0">Semana 1</h4>
+            </div>
+            <div class="card-body">
                 <h3 class="card-title h5 text-center">
-                  <a href="./pages/1_semana/semana1.html" class="text-decoration-none">Semana 1 - Introducción a XML</a>
+                <a href="./pages/1_semana/semana1.html" class="text-decoration-none">Introducción a XML</a>
                 </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><a href="./pages/1_semana/Puntos/01_intro.html" class="text-decoration-none">Introducción, historia, estructura y sintaxis</a></li>
-                  <li class="mb-2"><a href="./pages/1_semana/Puntos/02_etiquetas.html" class="text-decoration-none">Declaración de tipos de documento</a></li>
-                  <li class="mb-2"><a href="./pages/1_semana/Puntos/03_declaracion.html" class="text-decoration-none">Declaración de tipos de documento</a></li>
-                  <li class="mt-3 text-center"><a href="./pages/1_semana/Puntos/01_ejercicios.html" class="btn btn-sm btn-outline-primary">Ejercicios 01</a></li>
+                <ul class="list-unstyled mt-3 course-list">
+                <li class="mb-2"><a href="./pages/1_semana/Puntos/01_intro.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i>Introducción, historia, estructura y sintaxis</a></li>
+                <li class="mb-2"><a href="./pages/1_semana/Puntos/02_etiquetas.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i>Etiquetas, instrucciones de procesamiento</a></li>
+                <li class="mb-2"><a href="./pages/1_semana/Puntos/03_declaracion.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-primary"></i>Declaración de tipos de documento</a></li>
+                <li class="mt-3 text-center"><a href="./pages/1_semana/semana1.html" class="btn btn-sm btn-outline-primary">Ver más</a></li>
                 </ul>
               </div>
             </div>
           </div>
           
           <!-- Semana 2 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body">
-                <h3 class="card-title h5 text-center">
-                  <a href="./pages/2_semana/semana2.html" class="text-decoration-none">Semana 2 - Creación y uso de documentos XML</a>
-                </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><a href="./pages/2_semana/Puntos/04_elaboracion.html" class="text-decoration-none">Elaboración de documentos válidos</a></li>
-                  <li class="mb-2"><a href="./pages/2_semana/Puntos/05_espacios.html" class="text-decoration-none">Uso de espacio de nombres</a></li>
-                  <li class="mb-2"><a href="./pages/2_semana/Puntos/06_ventajas.html" class="text-decoration-none">Ventajas de los espacios de nombres</a></li>
-                  <li class="mb-2"><a href="./pages/2_semana/Puntos/07_metodos.html" class="text-decoration-none">Métodos de definición de documentos XML</a></li>
-                  <li class="mt-3 text-center"><a href="./pages/2_semana/Puntos/02_ejercicios.html" class="btn btn-sm btn-outline-primary">Ejercicios 02</a></li>
-                </ul>
-              </div>
+        <!-- Semana 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 border-0 shadow-sm course-card">
+            <div class="card-header bg-success text-white text-center py-3">
+            <i class="fas fa-file-code fs-3 mb-2"></i>
+            <h4 class="fw-bold mb-0">Semana 2</h4>
             </div>
-          </div>
-          
-          <!-- Semana 3 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body">
-                <h3 class="card-title h5 text-center">
-                  <a href="./pages/3_semana/semana3.html" class="text-decoration-none">Semana 3 - Validación y extensibilidad de XML</a>
-                </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><a href="./pages/3_semana/Puntos/08_creacion.html" class="text-decoration-none">Creación de descripciones y asociaciones</a></li>
-                  <li class="mb-2"><a href="./pages/3_semana/Puntos/09_validacion.html" class="text-decoration-none">Herramientas de creación y validación</a></li>
-                  <li class="mb-2"><a href="./pages/3_semana/Puntos/10_extensibilidad.html" class="text-decoration-none">Extensibilidad de los esquemas</a></li>
-                  <li class="mb-2"><a href="./pages/3_semana/Puntos/11_documentacion.html" class="text-decoration-none">Documentación de especificaciones</a></li>
-                </ul>
-              </div>
+            <div class="card-body">
+            <h3 class="card-title h5 text-center">
+                <a href="./pages/2_semana/semana2.html" class="text-decoration-none">Creación y uso de XML</a>
+            </h3>
+            <ul class="list-unstyled mt-3 course-list">
+                <li class="mb-2"><a href="./pages/2_semana/Puntos/04_elaboracion.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i>Elaboración de documentos válidos</a></li>
+                <li class="mb-2"><a href="./pages/2_semana/Puntos/05_espacios.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i>Uso de espacio de nombres</a></li>
+                <li class="mb-2"><a href="./pages/2_semana/Puntos/06_ventajas.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i>Ventajas de los espacios de nombres</a></li>
+                <li class="mb-2"><a href="./pages/2_semana/Puntos/07_metodos.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-success"></i>Métodos de definición de documentos XML</a></li>
+                <li class="mt-3 text-center"><a href="./pages/2_semana/semana2.html" class="btn btn-sm btn-outline-success">Ver más</a></li>
+            </ul>
             </div>
-          </div>
-          
-          <!-- Semana 4 -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm">
-              <div class="card-body">
-                <h3 class="card-title h5 text-center">
-                  <a href="./pages/4_semana/semana4.html" class="text-decoration-none">Semana 4 - Otros lenguajes de marcado</a>
-                </h3>
-                <ul class="list-unstyled mt-3">
-                  <li class="mb-2"><a href="./pages/4_semana/Puntos/12_yaml.html" class="text-decoration-none">YAML</a></li>
-                  <li class="mb-2"><a href="./pages/4_semana/Puntos/13_json.html" class="text-decoration-none">JSON</a></li>
-                  <li class="mb-2"><a href="./pages/4_semana/Puntos/14_markdown.html" class="text-decoration-none">Markdown</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
-      </section>
+        </div>
+          <!-- Semana 3 -->
+        <!-- Semana 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 border-0 shadow-sm course-card">
+            <div class="card-header bg-info text-white text-center py-3">
+            <i class="fas fa-check-circle fs-3 mb-2"></i>
+            <h4 class="fw-bold mb-0">Semana 3</h4>
+            </div>
+            <div class="card-body">
+            <h3 class="card-title h5 text-center">
+                <a href="./pages/3_semana/semana3.html" class="text-decoration-none">Validación XML</a>
+            </h3>
+            <ul class="list-unstyled mt-3 course-list">
+                <li class="mb-2"><a href="./pages/3_semana/Puntos/08_creacion.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-info"></i>Creación de descripciones y asociaciones</a></li>
+                <li class="mb-2"><a href="./pages/3_semana/Puntos/09_validacion.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-info"></i>Herramientas de creación y validación</a></li>
+                <li class="mb-2"><a href="./pages/3_semana/Puntos/10_extensibilidad.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-info"></i>Extensibilidad de los esquemas</a></li>
+                <li class="mb-2"><a href="./pages/3_semana/Puntos/11_documentacion.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-info"></i>Documentación de especificaciones</a></li>
+                <li class="mt-3 text-center"><a href="./pages/3_semana/semana3.html" class="btn btn-sm btn-outline-info">Ver más</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+          <!-- Semana 4 -->
+        <!-- Semana 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="card h-100 border-0 shadow-sm course-card">
+            <div class="card-header bg-danger text-white text-center py-3">
+            <i class="fas fa-code-branch fs-3 mb-2"></i>
+            <h4 class="fw-bold mb-0">Semana 4</h4>
+            </div>
+            <div class="card-body">
+            <h3 class="card-title h5 text-center">
+                <a href="./pages/4_semana/semana4.html" class="text-decoration-none">Formatos Alternativos</a>
+            </h3>
+            <ul class="list-unstyled mt-3 course-list">
+                <li class="mb-2"><a href="./pages/4_semana/Puntos/12_yaml.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-danger"></i>YAML</a></li>
+                <li class="mb-2"><a href="./pages/4_semana/Puntos/13_json.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-danger"></i>JSON</a></li>
+                <li class="mb-2"><a href="./pages/4_semana/Puntos/14_markdown.html" class="text-decoration-none"><i class="fas fa-angle-right me-2 text-danger"></i>Markdown</a></li>
+                <li class="mt-3 text-center"><a href="./pages/4_semana/semana4.html" class="btn btn-sm btn-outline-danger">Ver más</a></li>
+            </ul>
+            </div>
+        </div>
+        </div>
+    </section>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+          <div class="row gy-4 justify-content-center"> <!-- Añadido justify-content-center -->
+              <div class="col-lg-4 text-center text-lg-start"> <!-- Añadido text-center y text-lg-start -->
+                  <h5 class="mb-3">Curso XML</h5>
+                  <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado para estudiantes de desarrollo web.</p>
+                  <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start"> <!-- Añadido justify-content-center -->
+                      <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+                      <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+                      <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+                      <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-6 text-center text-lg-start"> <!-- Añadido text-center -->
+                  <h5 class="mb-3">Enlaces Rápidos</h5>
+                  <ul class="list-unstyled">
+                      <li class="mb-2"><a href="./index.html" class="text-white text-decoration-none">Inicio</a></li>
+                      <li class="mb-2"><a href="./pages/1_semana/semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+                      <li class="mb-2"><a href="./pages/2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+                      <li class="mb-2"><a href="./pages/3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+                      <li class="mb-2"><a href="./pages/4_semana/semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+                  </ul>
+              </div>
+          </div>
+          <hr class="my-4">
+          <div class="row">
+              <div class="col-md-6 text-center text-md-start">
+                  <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                  <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+              </div>
+          </div>
       </div>
-    </footer>
+  </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+</body>
 </html>

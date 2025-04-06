@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Etiquetas, instrucciones de procesamiento y referencia a entidades</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tus estilos -->
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/puntos.css">
     <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
-    <link rel="stylesheet" href="../../../css/main.css" />
-    <link rel="stylesheet" href="../../../css/puntos.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../../index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../../../index.html">Inicio</a>
             </li>
             
             <!-- Semana 1 -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link active dropdown-toggle" href="#" id="week1Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Semana 1
               </a>
               <ul class="dropdown-menu" aria-labelledby="week1Dropdown">
                 <li><a class="dropdown-item" href="../semana1.html">Ir a la Semana 1</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="../Puntos/01_intro.html">XML - Historia, estructura y sintáxis</a></li>
-                <li><a class="dropdown-item active" href="../Puntos/02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
-                <li><a class="dropdown-item" href="../Puntos/03_declaracion.html">Declaración de tipos de documento</a></li>
-                <li><a class="dropdown-item" href="../Puntos/01_ejercicios.html">Ejercicios 01</a></li>
+                <li><a class="dropdown-item" href="./01_intro.html">XML - Historia, estructura y sintáxis</a></li>
+                <li><a class="dropdown-item active" href="./02_etiquetas.html">Etiquetas, instrucciones de procesamiento</a></li>
+                <li><a class="dropdown-item" href="./03_declaracion.html">Declaración de tipos de documento</a></li>
+                <li><a class="dropdown-item" href="./01_ejercicios.html">Ejercicios 01</a></li>
               </ul>
             </li>
             
@@ -48,8 +58,8 @@
               <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
                 <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos válidos</a></li>
-                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacio de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos XML válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacios de nombres</a></li>
                 <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
                 <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
                 <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
@@ -93,14 +103,20 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4 text-center bg-gradient">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold">02. Etiquetas, instrucciones de procesamiento y referencia a entidades</h1>
-        <p class="lead fs-3">Semana 1</p>
+    <header class="week-header position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-index-1 py-5 text-center" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">02. Etiquetas, instrucciones de procesamiento y referencia a entidades</h1>
+        <p class="lead fs-3 text-white">Semana 1</p>
+      </div>
+      <div class="wave-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
       </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
+    <main class="container my-5 flex-grow-1">
       <div class="row">
         <!-- Sidebar -->
         <div class="col-lg-3">
@@ -123,7 +139,7 @@
 
         <!-- Contenido principal -->
         <div class="col-lg-9">
-          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+          <section class="content p-4 bg-white rounded-4 shadow mb-5" data-aos="fade-up">
             <h2 class="text-center mb-4">Etiquetas, instrucciones y referencias</h2>
             
             <article id="etiquetas" class="mb-5">
@@ -142,7 +158,12 @@
                     Cada elemento no-vacío en XML es marcado por una etiqueta de
                     inicio.
                   </p>
-                  <code>&lt;address&gt;</code>
+                  <div class="code-block position-relative">
+                    <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                      <i class="far fa-copy"></i>
+                    </button>
+                    <pre class="bg-light p-3 rounded"><code>&lt;address&gt;</code></pre>
+                  </div>
                 </li>
                 <li class="list-group-item">
                   <p>
@@ -150,7 +171,12 @@
                     Cada elemento que tenga una etiqueta de inicio ha de terminar
                     con una etiqueta de cierre.
                   </p>
-                  <code>&lt;/address&gt;</code>
+                  <div class="code-block position-relative">
+                    <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                      <i class="far fa-copy"></i>
+                    </button>
+                    <pre class="bg-light p-3 rounded"><code>&lt;/address&gt;</code></pre>
+                  </div>
                 </li>
                 <li class="list-group-item">
                   <p>
@@ -158,15 +184,18 @@
                     Los elementos que no tienen contenido se denominan vacíos. Un
                     elemento vacío puede ser representado de dos maneras:
                   </p>
-                  <code
-                    >&lt;hr&gt;&lt;/hr&gt; &lt;!-- Con una etiqueta de inicio
-                    seguidamente de la de cierre --&gt;</code
-                  >
-                  <br >
-                  <code
-                    >&lt;hr /&gt; &lt;!-- Con una etiqueta de elemento vacío (forma
-                    abreviada) --&gt;</code
-                  >
+                  <div class="code-block position-relative">
+                    <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                      <i class="far fa-copy"></i>
+                    </button>
+                    <pre class="bg-light p-3 rounded"><code>&lt;hr&gt;&lt;/hr&gt; &lt;!-- Con una etiqueta de inicio seguidamente de la de cierre --&gt;</code></pre>
+                  </div>
+                  <div class="code-block position-relative mt-2">
+                    <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                      <i class="far fa-copy"></i>
+                    </button>
+                    <pre class="bg-light p-3 rounded"><code>&lt;hr /&gt; &lt;!-- Con una etiqueta de elemento vacío (forma abreviada) --&gt;</code></pre>
+                  </div>
                 </li>
               </ul>
             </article>
@@ -180,10 +209,20 @@
               </p>
 
               <p><strong>Incorrecto:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;address&gt;Valle de los Caídos&lt;/Address&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;address&gt;Valle de los Caídos&lt;/Address&gt;</code></pre>
+              </div>
 
               <p><strong>Correcto:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;address&gt;Valle de los Caídos&lt;/address&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;address&gt;Valle de los Caídos&lt;/address&gt;</code></pre>
+              </div>
 
               <h3 class="h4">Deben cerrarse en orden anidado</h3>
               <p>
@@ -192,16 +231,25 @@
               </p>
 
               <p><strong>Ejemplo:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;elemento_externo&gt;
-          &lt;elemento_interno&gt;
-              Juanma Castaño
-          &lt;/elemento_interno&gt;
-      &lt;/elemento_externo&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;elemento_externo&gt;
+        &lt;elemento_interno&gt;
+            Juanma Castaño
+        &lt;/elemento_interno&gt;
+    &lt;/elemento_externo&gt;</code></pre>
+              </div>
 
               <p>Ejemplo extendido de anidamiento correcto e incorrecto</p>
 
               <p><strong>Correcto:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;persona&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;persona&gt;
   &lt;nombre&gt;Ana&lt;/nombre&gt;
   &lt;dirección&gt;
       &lt;calle&gt;Gran Vía&lt;/calle&gt;
@@ -209,9 +257,14 @@
       &lt;ciudad&gt;Madrid&lt;/ciudad&gt;
   &lt;/dirección&gt;
 &lt;/persona&gt;</code></pre>
+              </div>
 
               <p><strong>Incorrecto:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;persona&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;persona&gt;
   &lt;nombre&gt;Ana&lt;/nombre&gt;
   &lt;dirección&gt;
       &lt;calle&gt;Gran Vía&lt;/calle&gt;
@@ -220,6 +273,7 @@
   &lt;!-- ERROR: Se cierra persona antes que dirección --&gt;
   &lt;ciudad&gt;Madrid&lt;/ciudad&gt;
   &lt;/dirección&gt;</code></pre>
+              </div>
             </article>
 
             <article id="instrucciones-de-procesamiento" class="mb-5">
@@ -232,7 +286,12 @@
               </p>
 
               <p><strong>Ejemplo:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;?xml-stylesheet type="text/css" href="estilo-animales.css"?&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;?xml-stylesheet type="text/css" href="estilo-animales.css"?&gt;</code></pre>
+              </div>
               <p>
                 Esta instrucción serviría para asociar un archivo CSS con el
                 documento XML.
@@ -243,13 +302,28 @@
               </p>
 
               <p><strong>Declaración XML:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</code></pre>
+              </div>
 
               <p><strong>Instrucción para un procesador específico:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;?php echo "Esto será procesado por PHP"; ?&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;?php echo "Esto será procesado por PHP"; ?&gt;</code></pre>
+              </div>
 
               <p><strong>Instrucción para Apache Cocoon:</strong></p>
-              <pre class="bg-light p-3"><code>&lt;?cocoon-process type="xslt" stylesheet="mi-transformacion.xsl"?&gt;</code></pre>
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;?cocoon-process type="xslt" stylesheet="mi-transformacion.xsl"?&gt;</code></pre>
+              </div>
             </article>
 
             <article id="referencias" class="mb-5">
@@ -304,50 +378,75 @@
                 <strong>&lt; (menor que)</strong>: Es problemático porque indica el
                 comienzo de una etiqueta.
               </p>
-              <pre class="bg-light p-3"><code>&lt;!-- Incorrecto --&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!-- Incorrecto --&gt;
       &lt;mensaje&gt;Si 5 &lt; 10 entonces...&lt;/mensaje&gt;
       
       &lt;!-- Correcto --&gt;
       &lt;mensaje&gt;Si 5 &amp;lt; 10 entonces...&lt;/mensaje&gt;</code></pre>
+              </div>
 
               <p>
                 <strong>&gt; (mayor que)</strong>: Este carácter sí puede utilizarse
                 y no sería incorrecto, pero aun así se recomienda hacer uso de su
                 referencia para mayor claridad y consistencia.
               </p>
-              <pre class="bg-light p-3"><code>&lt;!-- Recomendado --&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!-- Recomendado --&gt;
       &lt;mensaje&gt;Si 10 &amp;gt; 5 entonces...&lt;/mensaje&gt;</code></pre>
+              </div>
 
               <p>
                 <strong>&quot; (comilla doble)</strong>: Si el valor de un atributo
                 se escribe entre comillas dobles, dicho valor no podrá contener este
                 carácter sin usar su referencia.
               </p>
-              <pre class="bg-light p-3"><code>&lt;!-- Incorrecto --&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!-- Incorrecto --&gt;
       &lt;dato caracter="comilla doble(")"&gt;/&gt;
       
       &lt;!-- Correcto --&gt;
       &lt;dato caracter="comilla doble(&amp;quot;)" /&gt;</code></pre>
+              </div>
 
               <p>
                 <strong>&#39; (comilla simple)</strong>: De igual modo ocurre con la
                 comilla simple:
               </p>
-              <pre class="bg-light p-3"><code>&lt;!-- Incorrecto --&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!-- Incorrecto --&gt;
       &lt;dato caracter='comilla simple(')'&gt;/&gt;
       
       &lt;!-- Correcto --&gt;
       &lt;dato caracter='comilla simple(&amp;apos;)' /&gt;</code></pre>
+              </div>
 
               <p>
                 <strong>&amp; (ampersand)</strong>: Se debe usar su referencia para
                 evitar confusiones con el inicio de otras referencias de entidad.
               </p>
-              <pre class="bg-light p-3"><code>&lt;!-- Incorrecto --&gt;
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!-- Incorrecto --&gt;
       &lt;empresa&gt;Johnson &amp; Johnson&lt;/empresa&gt;
       
       &lt;!-- Correcto --&gt;
       &lt;empresa&gt;Johnson &amp;amp; Johnson&lt;/empresa&gt;</code></pre>
+              </div>
             </article>
 
             <article id="entidades" class="mb-5">
@@ -356,20 +455,25 @@
                 Además de las entidades predefinidas, XML permite definir entidades
                 personalizadas en la DTD del documento:
               </p>
-              <pre class="bg-light p-3"><code>&lt;!DOCTYPE documento [
+              <div class="code-block position-relative">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>&lt;!DOCTYPE documento [
           &lt;!ENTITY copyright "© 2023 Mi Empresa. Todos los derechos reservados."&gt;
       ]&gt;
       &lt;documento&gt;
           &lt;pie&gt;&amp;copyright;&lt;/pie&gt;
       &lt;/documento&gt;</code></pre>
+              </div>
             </article>
 
             <div class="d-flex justify-content-between mt-5">
               <a href="../Puntos/01_intro.html" class="btn btn-primary">
-                &larr; Volver al anterior punto
+                <i class="fas fa-arrow-left me-1"></i> Volver al anterior punto
               </a>
               <a href="../Puntos/03_declaracion.html" class="btn btn-primary">
-                Ir al siguiente punto &rarr;
+                Ir al siguiente punto <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
           </section>
@@ -377,17 +481,54 @@
       </div>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 text-center text-lg-start">
+            <h5 class="mb-3">Curso XML</h5>
+            <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado.</p>
+            <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+              <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+              <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center text-lg-start">
+            <h5 class="mb-3">Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="../../../index.html" class="text-white text-decoration-none">Inicio</a></li>
+              <li class="mb-2"><a href="../semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+              <li class="mb-2"><a href="../../2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+              <li class="mb-2"><a href="../../3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+              <li class="mb-2"><a href="../../4_semana/semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Botón para ir arriba -->
-    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
+    <button id="btnSubir" class="btn btn-primary btn-subir">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="../../../js/main.js"></script>
     <script src="../../../js/scrollToTop.js"></script>
+    <script src="../../../js/puntos.js"></script>
   </body>
 </html>

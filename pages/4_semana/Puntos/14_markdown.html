@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>14. Otros lenguajes - Markdown</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tus estilos -->
-    <link rel="stylesheet" href="../../../css/main.css" />
-    <link rel="stylesheet" href="../../../css/puntos.css" />
-    <link rel="icon" type="image/x-icon" href="../../../../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/puntos.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../../index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../../../index.html">Inicio</a>
             </li>
@@ -93,14 +103,20 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4 text-center bg-gradient">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold">14. Otros lenguajes - Markdown</h1>
-        <p class="lead fs-3">Semana 4</p>
+    <header class="week-header position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-index-1 py-5 text-center" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">14. Otros lenguajes - Markdown</h1>
+        <p class="lead fs-3 text-white">Semana 4</p>
+      </div>
+      <div class="wave-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
       </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
+    <main class="container my-5 flex-grow-1">
       <div class="row">
         <!-- Sidebar -->
         <div class="col-lg-3">
@@ -126,7 +142,7 @@
 
         <!-- Contenido principal -->
         <div class="col-lg-9">
-          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+          <section class="content p-4 bg-white rounded-4 shadow mb-5" data-aos="fade-up">
             <h2 class="text-center mb-4">Markdown</h2>
             
             <article id="introduccion" class="mb-5">
@@ -141,26 +157,40 @@
             <article id="encabezados" class="mb-5">
               <h2 class="h3">Encabezados</h2>
               <p>Los encabezados organizan el contenido en secciones y ayudan a estructurar el documento.</p>
-              <pre class="bg-light p-3 rounded"><code># Encabezado de Nivel 1
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code># Encabezado de Nivel 1
 ## Encabezado de Nivel 2
 ### Encabezado de Nivel 3
 #### Encabezado de Nivel 4
 ##### Encabezado de Nivel 5
 ###### Encabezado de Nivel 6</code></pre>
+              </div>
             </article>
 
             <article id="enfasis" class="mb-5">
               <h2 class="h3">Énfasis</h2>
               <p>El énfasis se usa para resaltar partes del texto.</p>
-              <pre class="bg-light p-3 rounded"><code>*Texto en cursiva* o _Texto en cursiva_
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>*Texto en cursiva* o _Texto en cursiva_
 **Texto en negrita** o __Texto en negrita__
 ***Texto en negrita y cursiva*** o ___Texto en negrita y cursiva___</code></pre>
+              </div>
             </article>
 
             <article id="listas" class="mb-5">
               <h2 class="h3">Listas</h2>
               <p>Las listas organizan información en puntos o ítems.</p>
-              <pre class="bg-light p-3 rounded"><code>- Elemento 1
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>- Elemento 1
 - Elemento 2
 - Sub-elemento 1
 - Sub-elemento 2
@@ -169,51 +199,77 @@
 2. Segundo elemento
  1. Sub-elemento 1
  2. Sub-elemento 2</code></pre>
+              </div>
             </article>
 
             <article id="codigo" class="mb-5">
               <h2 class="h3">Bloques de Código</h2>
               <p>Los bloques de código permiten mostrar fragmentos de código con formato adecuado.</p>
-              <pre class="bg-light p-3 rounded"><code>```python
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>```python
 print("Hola, Markdown!")
 ```</code></pre>
+              </div>
             </article>
 
             <article id="enlaces" class="mb-5">
               <h2 class="h3">Enlaces</h2>
               <p>Los enlaces dirigen a los lectores a otras páginas o recursos relevantes.</p>
-              <pre class="bg-light p-3 rounded"><code>[Texto del enlace](https://ejemplo.com)</code></pre>
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>[Texto del enlace](https://ejemplo.com)</code></pre>
+              </div>
             </article>
 
             <article id="imagenes" class="mb-5">
               <h2 class="h3">Imágenes</h2>
               <p>Las imágenes pueden complementar el texto.</p>
-              <pre class="bg-light p-3 rounded"><code>![Texto alternativo](https://example.com/imagen.png)</code></pre>
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>![Texto alternativo](https://example.com/imagen.png)</code></pre>
+              </div>
             </article>
 
             <article id="tablas" class="mb-5">
               <h2 class="h3">Tablas</h2>
               <p>Las tablas organizan datos en filas y columnas.</p>
-              <pre class="bg-light p-3 rounded"><code>| Encabezado 1 | Encabezado 2 |
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>| Encabezado 1 | Encabezado 2 |
 |--------------|--------------|
 | Dato 1       | Dato 2       |
 | Dato 3       | Dato 4       |</code></pre>
+              </div>
             </article>
 
             <article id="citas" class="mb-5">
               <h2 class="h3">Citas</h2>
               <p>Las citas resaltan declaraciones importantes.</p>
-              <pre class="bg-light p-3 rounded"><code>> Esto es una cita.
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>> Esto es una cita.
 >
 > - Autor de la cita</code></pre>
+              </div>
             </article>
 
             <div class="d-flex justify-content-between mt-5">
               <a href="./13_json.html" class="btn btn-primary">
-                &larr; Volver al anterior punto
+                <i class="fas fa-arrow-left me-1"></i> Volver al anterior punto
               </a>
-              <a href="./04_ejercicios.html" class="btn btn-primary">
-                Ir al siguiente punto &rarr;
+              <a href="../../../index.html" class="btn btn-primary">
+                Volver al Inicio <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
           </section>
@@ -221,17 +277,54 @@ print("Hola, Markdown!")
       </div>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 text-center text-lg-start">
+            <h5 class="mb-3">Curso XML</h5>
+            <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado.</p>
+            <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+              <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+              <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center text-lg-start">
+            <h5 class="mb-3">Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="../../../index.html" class="text-white text-decoration-none">Inicio</a></li>
+              <li class="mb-2"><a href="../../1_semana/semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+              <li class="mb-2"><a href="../2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+              <li class="mb-2"><a href="../3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+              <li class="mb-2"><a href="../semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Botón para ir arriba -->
-    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
+    <button id="btnSubir" class="btn btn-primary btn-subir">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="../../../js/main.js"></script>
     <script src="../../../js/scrollToTop.js"></script>
+    <script src="../../../js/puntos.js"></script>
   </body>
 </html>

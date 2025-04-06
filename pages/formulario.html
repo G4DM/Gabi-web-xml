@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario</title>
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Información del Usuario</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/usuario.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tus estilos -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/usuario.css">
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../index.html">Inicio</a>
             </li>
@@ -95,27 +103,61 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4 text-center bg-gradient">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold">Información del Usuario</h1>
+    <header class="week-header position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-index-1 py-5 text-center" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">Información del Usuario</h1>
+        <p class="lead fs-3 text-white">Contacto</p>
       </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
+    <main class="container my-5 flex-grow-1">
       <!-- Contenedor para mostrar el contenido del XML -->
       <div id="contenido" class="row g-4"></div>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 text-center text-lg-start">
+            <h5 class="mb-3">Curso XML</h5>
+            <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado.</p>
+            <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+              <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+              <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center text-lg-start">
+            <h5 class="mb-3">Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="../index.html" class="text-white text-decoration-none">Inicio</a></li>
+              <li class="mb-2"><a href="./1_semana/semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+              <li class="mb-2"><a href="./2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+              <li class="mb-2"><a href="./3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+              <li class="mb-2"><a href="./4_semana/semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Custom JS -->
+    <script src="../js/main.js"></script>
     <script src="../js/formulario.js"></script>
-    <script src="../js/navbar.js"></script>
   </body>
 </html>

@@ -2,15 +2,22 @@
 
 /* Header específico para páginas de semana */
 .week-header {
-  padding: 5rem 0;
-  margin-top: 56px; /* Compensa el navbar fijo */
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  padding: 7rem 0 9rem;
+  position: relative;
+  overflow: hidden;
+  margin-top: 56px;
+  z-index: 1;
 }
 
 /* Cards de puntos personalizadas */
 .point-card {
-  border: 1px solid #D6CCC2;
-  background-color: #faf1e9;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  transition: transform var(--transition-speed), 
+              box-shadow var(--transition-speed);
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .point-card:hover {
@@ -18,54 +25,87 @@
   box-shadow: 0 8px 16px rgba(213, 189, 175, 0.3) !important;
 }
 
-.point-card .card-title a {
-  color: #8b7d6b;
-  font-weight: 600;
+.point-card .card-header {
+  border-bottom: none;
 }
 
-.point-card ul {
-  padding-left: 1rem;
+.point-card .card-title a {
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: color var(--transition-speed);
+}
+
+.point-card .card-title a:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.point-list {
+  padding-left: 0;
   text-align: left;
 }
 
-.point-card ul li {
+.point-list li {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
+  transition: transform 0.2s ease;
+  padding-left: 0.5rem;
+}
+
+.point-list li:hover {
+  transform: translateX(5px);
+}
+
+.point-list i {
+  width: 20px;
+  text-align: center;
 }
 
 /* Contenido principal */
-.week-content {
-  width: 95%;
-  margin: 2rem auto;
+.content {
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
 }
 
 /* Responsividad */
 @media (max-width: 992px) {
   .week-header {
-      padding: 4rem 0;
+    padding: 6rem 0 8rem;
   }
 }
 
 @media (max-width: 768px) {
   .week-header {
-      padding: 3rem 0;
+    padding: 5rem 0 7rem;
+  }
+  
+  .week-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .week-header p {
+    font-size: 1.2rem;
   }
   
   .point-card {
-      margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .week-header {
-      padding: 2.5rem 0;
+    padding: 4rem 0 6rem;
   }
   
   .week-header h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
   
   .week-header p {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
   }
 }

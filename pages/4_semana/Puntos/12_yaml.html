@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>12. YAML - Otros lenguajes de serialización</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tus estilos -->
-    <link rel="stylesheet" href="../../../css/main.css" />
-    <link rel="stylesheet" href="../../../css/puntos.css" />
-    <link rel="stylesheet" href="../../../css/YAML.css" />
-    <link rel="icon" type="image/x-icon" href="../../../../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../../../css/main.css">
+    <link rel="stylesheet" href="../../../css/puntos.css">
+    <link rel="stylesheet" href="../../../css/YAML.css">
+    <link rel="icon" type="image/x-icon" href="../../../assets/img/favicon.ico">
   </head>
   <body class="d-flex flex-column min-vh-100">
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Cargando...</span>
+      </div>
+    </div>
+
     <!-- Navbar Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../../../index.html">Curso XML</a>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top transition-nav">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../../../index.html"><i class="fas fa-code me-2"></i>Curso XML</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link" href="../../../index.html">Inicio</a>
             </li>
@@ -47,13 +57,13 @@
                 Semana 2
               </a>
               <ul class="dropdown-menu" aria-labelledby="week2Dropdown">
-                <li><a class="dropdown-item" href="../2_semana/semana2.html">Ir a la Semana 2</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/semana2.html">Ir a la Semana 2</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos válidos</a></li>
-                <li><a class="dropdown-item" href="../2_semana/Puntos/05_espacios.html">Uso de espacio de nombres</a></li>
-                <li><a class="dropdown-item" href="../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
-                <li><a class="dropdown-item" href="../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
-                <li><a class="dropdown-item" href="../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/04_elaboracion.html">Elaboración de documentos válidos</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/05_espacios.html">Uso de espacio de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/06_ventajas.html">Ventajas de los espacios de nombres</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/07_metodos.html">Métodos de definición de documentos XML</a></li>
+                <li><a class="dropdown-item" href="../../2_semana/Puntos/02_ejercicios.html">Ejercicios 02</a></li>
               </ul>
             </li>
             
@@ -63,12 +73,12 @@
                 Semana 3
               </a>
               <ul class="dropdown-menu" aria-labelledby="week3Dropdown">
-                <li><a class="dropdown-item" href="../3_semana/semana3.html">Ir a la Semana 3</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/semana3.html">Ir a la Semana 3</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
-                <li><a class="dropdown-item" href="../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
-                <li><a class="dropdown-item" href="../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
-                <li><a class="dropdown-item" href="../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/08_creacion.html">Creación de descripciones y asociaciones</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/09_validacion.html">Herramientas de creación y validación</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/10_extensibilidad.html">Extensibilidad de los esquemas</a></li>
+                <li><a class="dropdown-item" href="../../3_semana/Puntos/11_documentacion.html">Documentación de especificaciones</a></li>
               </ul>
             </li>
             
@@ -94,14 +104,20 @@
       </div>
     </nav>
 
-    <header class="mt-5 pt-4 text-center bg-gradient">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold">12. YAML - Otros lenguajes de serialización</h1>
-        <p class="lead fs-3">Semana 4</p>
+    <header class="week-header position-relative">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative z-index-1 py-5 text-center" data-aos="fade-up">
+        <h1 class="display-3 fw-bold text-white">12. YAML - Otros lenguajes de serialización</h1>
+        <p class="lead fs-3 text-white">Semana 4</p>
+      </div>
+      <div class="wave-shape">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#ffffff" fill-opacity="1" d="M0,192L48,186.7C96,181,192,171,288,176C384,181,480,203,576,192C672,181,768,139,864,128C960,117,1056,139,1152,149.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
       </div>
     </header>
 
-    <main class="container my-4 flex-grow-1">
+    <main class="container my-5 flex-grow-1">
       <div class="row">
         <!-- Sidebar -->
         <div class="col-lg-3">
@@ -123,7 +139,7 @@
 
         <!-- Contenido principal -->
         <div class="col-lg-9">
-          <section class="content p-4 bg-white rounded-3 shadow-sm mb-5">
+          <section class="content p-4 bg-white rounded-4 shadow mb-5" data-aos="fade-up">
             <h2 class="text-center mb-4">YAML: Un Lenguaje de Serialización de Datos</h2>
             
             <article id="introduccion" class="mb-5">
@@ -152,22 +168,34 @@
                   minimalista basada en indentación, evitando caracteres que complican la 
                   legibilidad como {}, [] o ;. Por ejemplo:
                 </li>
+              </ul>
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>persona:
   nombre: Alex
     edad: 29 
       ocupacion: Desarrollador</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
-                
+              </div>
+              
+              <ul class="list-group mb-3">
                 <li class="list-group-item">
                   <strong>Uso de Comentarios:</strong> Los comentarios se añaden con #, 
                   permitiendo documentar configuraciones dentro de los archivos:
                 </li>
+              </ul>
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>#Informacion del usuario
 usuario:
   nombre: Alex
   activo: true</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
 
+              <ul class="list-group mb-3">
                 <li class="list-group-item">
                   <strong>Estructura Basada en Espaciado:</strong> La indentación no solo es una 
                   característica estética, sino que define jerarquías y relaciones entre los datos. 
@@ -184,12 +212,22 @@ usuario:
                 <li class="list-group-item">
                   <strong>Estructuras Complejas:</strong> Listas, mapas/diccionarios y mapas dentro de listas o listas dentro de mapas:
                 </li>
+              </ul>
+              
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>habilidades:
   - programacion
   - diseño
   - liderazgo</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
-                
+              </div>
+              
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>configuracion:
   base_de_datos:
     host: localhost
@@ -197,23 +235,40 @@ usuario:
   servidores:
     - servidor1
     - servidor2</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
-                
+              </div>
+              
+              <ul class="list-group mb-3">
                 <li class="list-group-item">
                   <strong>Cadenas Multilinea:</strong> Permite representar texto extenso en formato legible utilizando caracteres especiales:
                 </li>
-                <p> | (Bloque literal) conserva saltos de linea</p>
+                <li class="list-group-item">
+                  | (Bloque literal) conserva saltos de linea
+                </li>
+              </ul>
+              
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>mensaje: |
   Hola Alex,
   Este es un texto que conserva el formato.</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
-                
-                <p>> (Bloque plegado) convierte saltos de linea en espacios</p>
+              </div>
+              
+              <ul class="list-group mb-3">
+                <li class="list-group-item">
+                  > (Bloque plegado) convierte saltos de linea en espacios
+                </li>
+              </ul>
+              
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
                 <pre class="bg-light p-3 rounded"><code>descripcion: >
   Este texto sera interpretado como una linea continua
   aunque se escriba en varias lineas</code></pre>
-                <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
-              </ul>
+              </div>
               
               <h3 class="h4">1.3. Integración con Herramientas y Tecnologias</h3>
               <p>Gracias a su diseño flexible, YAML se integra con un gran número de lenguajes de programación y plataformas:</p>
@@ -306,16 +361,24 @@ usuario:
 
               <h3 class="h4">Ejemplo YAML frente a JSON</h3>
               <p><strong>YAML:</strong></p>
-              <pre class="bg-light p-3 rounded"><code>producto:
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>producto:
   nombre: Laptop
   precio: 1200.50
   características:
     - pantalla: 15"
     - procesador: Intel i7</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
 
               <p><strong>JSON:</strong></p>
-              <pre class="bg-light p-3 rounded"><code>{
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>{
   "producto": {
     "nombre": "Laptop",
     "precio": 1200.50,
@@ -325,7 +388,7 @@ usuario:
     ]
   }
 }</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
             </article>
 
             <article id="ejemplos" class="mb-5">
@@ -333,17 +396,25 @@ usuario:
 
               <h3 class="h4">4.1. Configuraciones para Herramientas DevOps</h3>
               <p>Ejemplo para Ansible:</p>
-              <pre class="bg-light p-3 rounded"><code>- name: Configurar Servidores
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>- name: Configurar Servidores
   hosts: web
   tasks:
     - name: Instalar Apache
       apt:
         name: apache2
         state: present</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
 
               <h3 class="h4">4.2. Orquestación de Contenedores con Docker Compose</h3>
-              <pre class="bg-light p-3 rounded"><code>version: '3.9'
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>version: '3.9'
 services:
   app:
     build: .
@@ -353,10 +424,14 @@ services:
     image: postgres:13
     environment:
       POSTGRES_PASSWORD: ejemplo</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
 
               <h3 class="h4">4.3. Gestión de Recursos en Kubernetes</h3>
-              <pre class="bg-light p-3 rounded"><code>apiVersion: v1
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>apiVersion: v1
 kind: Pod
 metadata:
   name: ejemplo-pod
@@ -366,11 +441,15 @@ spec:
     image: nginx:latest
     ports:
     - containerPort: 80</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
 
               <h3 class="h4">4.4. Automatización de CI/CD</h3>
               <p>Ejemplo de pipeline con GitHub Actions:</p>
-              <pre class="bg-light p-3 rounded"><code>name: Build and Test
+              <div class="code-block position-relative mb-3">
+                <button class="btn btn-sm btn-copy position-absolute top-0 end-0 m-2" title="Copiar código">
+                  <i class="far fa-copy"></i>
+                </button>
+                <pre class="bg-light p-3 rounded"><code>name: Build and Test
 on:
   push:
     branches:
@@ -388,15 +467,15 @@ jobs:
     steps:
       - name: Run Tests
         run: npm test</code></pre>
-              <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard(this)">Copiar</button>
+              </div>
             </article>
 
             <div class="d-flex justify-content-between mt-5">
               <a href="../../3_semana/semana3.html" class="btn btn-primary">
-                &larr; Volver a la Semana 3
+                <i class="fas fa-arrow-left me-1"></i> Volver a la Semana 3
               </a>
               <a href="./13_json.html" class="btn btn-primary">
-                Ir al siguiente punto &rarr;
+                Ir al siguiente punto <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
           </section>
@@ -404,18 +483,53 @@ jobs:
       </div>
     </main>
 
-    <footer class="bg-light py-3 mt-auto">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenixa</p>
+    <footer class="bg-dark text-white py-5 mt-auto">
+      <div class="container">
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4 text-center text-lg-start">
+            <h5 class="mb-3">Curso XML</h5>
+            <p class="mb-4">Aprende todo lo básico de XML en tan solo 4 semanas con nuestro curso estructurado.</p>
+            <div class="social-links d-flex gap-3 mb-3 justify-content-center justify-content-lg-start">
+              <a href="https://github.com/G4DM" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fs-4"></i></a>
+              <a href="https://x.com/G4DM_" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter fs-4"></i></a>
+              <a href="https://www.linkedin.com/in/gabriel-daniel-manea-82b246216/" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin fs-4"></i></a>
+              <a href="https://www.youtube.com/@gabimanea6419" class="text-dark" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube fs-4"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center text-lg-start">
+            <h5 class="mb-3">Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="../../../index.html" class="text-white text-decoration-none">Inicio</a></li>
+              <li class="mb-2"><a href="../../1_semana/semana1.html" class="text-white text-decoration-none">Semana 1</a></li>
+              <li class="mb-2"><a href="../2_semana/semana2.html" class="text-white text-decoration-none">Semana 2</a></li>
+              <li class="mb-2"><a href="../../3_semana/semana3.html" class="text-white text-decoration-none">Semana 3</a></li>
+              <li class="mb-2"><a href="../semana4.html" class="text-white text-decoration-none">Semana 4</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">&copy; 2025 Grupo XML 1º DAW - IES Serra Perenxisa</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> por Gabriel Daniel Manea</p>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Botón para ir arriba -->
-    <button id="btnSubir" class="btn btn-primary btn-subir">▲</button>
+    <button id="btnSubir" class="btn btn-primary btn-subir">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../js/scrollToTop.js"></script>
-    <script src="../../../js/YAML.js"></script>
+    <!-- AOS initialization script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/puntos.js"></script>
   </body>
 </html>

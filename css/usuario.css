@@ -1,106 +1,173 @@
-/* usuario.css - Complete Styles for User Cards */
+/* usuario.css - Estilos modernizados para tarjetas de usuario */
 
-/* Main container - uses Bootstrap grid */
-#contenido {
-    padding: 20px 0;
-}
-
-/* User card styling - complements Bootstrap */
-.usuario {
-    background: rgba(255, 255, 255, 0.95);
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* Variables de color */
+:root {
+    --primary-bg: #d5bdaf;
+    --secondary-bg: #f5ebe0;
+    --accent-color: #8b7d6b;
+    --hover-color: #5a4a42;
+    --card-bg: #faf1e9;
+    --card-border: #d6ccc2;
+    --text-dark: #333;
+    --text-light: #555;
+    --transition-speed: 0.3s;
+    --border-radius: 12px;
+  }
+  
+  /* Estilos para las tarjetas de usuario */
+  .usuario {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(139, 125, 107, 0.1);
+    transition: all var(--transition-speed) ease;
     height: 100%;
     overflow: hidden;
-}
-
-/* Card hover effects */
-.usuario:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15);
-}
-
-/* Card title */
-.usuario h2.card-title {
-    color: #8b4513; /* Brown color */
+    position: relative;
+  }
+  
+  /* Efecto hover */
+  .usuario:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(139, 125, 107, 0.2);
+  }
+  
+  /* Contenido de la tarjeta */
+  .usuario .card-body {
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Título de la tarjeta */
+  .usuario h2.card-title {
+    color: var(--accent-color);
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     font-weight: 600;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
-}
-
-/* Card text */
-.usuario .card-text {
-    color: #495057;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(139, 125, 107, 0.1);
+    position: relative;
+  }
+  
+  .usuario h2.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-color), var(--hover-color));
+  }
+  
+  /* Texto descriptivo */
+  .usuario .card-text {
+    color: var(--text-light);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
-}
-
-/* Social media section */
-.usuario h5 {
-    color: #6c757d;
+  }
+  
+  /* Sección de redes sociales */
+  .usuario h5 {
+    color: var(--accent-color);
     font-size: 1.1rem;
     margin-bottom: 1rem;
-}
-
-/* Social media links list */
-.usuario .list-unstyled {
+    font-weight: 500;
+  }
+  
+  /* Lista de redes sociales */
+  .usuario .list-unstyled {
     padding-left: 0;
-}
-
-.usuario .list-unstyled li {
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
-}
-
-/* Social media icons */
-.usuario .fab {
+  }
+  
+  .usuario .list-unstyled li {
+    margin-bottom: 0.75rem;
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .usuario .list-unstyled li:hover {
+    transform: translateX(5px);
+  }
+  
+  /* Iconos */
+  .usuario .fab {
     width: 20px;
     text-align: center;
-    margin-right: 8px;
-    color: #8b4513;
-}
-
-/* Links styling */
-.usuario a {
-    color: #6c757d;
+    margin-right: 10px;
+    color: var(--accent-color);
+    transition: color var(--transition-speed) ease;
+  }
+  
+  /* Enlaces */
+  .usuario a {
+    color: var(--text-dark);
     text-decoration: none;
-    transition: color 0.2s ease;
-    display: inline-block;
-}
-
-.usuario a:hover {
-    color: #8b4513;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
+    transition: all var(--transition-speed) ease;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .usuario a:hover {
+    color: var(--hover-color);
+  }
+  
+  .usuario a:hover .fab {
+    color: var(--hover-color);
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .usuario {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  /* Retrasos para cada tarjeta */
+  .usuario:nth-child(1) { animation-delay: 0.1s; }
+  .usuario:nth-child(2) { animation-delay: 0.2s; }
+  .usuario:nth-child(3) { animation-delay: 0.3s; }
+  .usuario:nth-child(4) { animation-delay: 0.4s; }
+  .usuario:nth-child(5) { animation-delay: 0.5s; }
+  
+  /* Efecto de fondo decorativo */
+  .usuario::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(213, 189, 175, 0.1) 0%, rgba(213, 189, 175, 0) 70%);
+    transition: all 0.6s ease;
+    z-index: 0;
+  }
+  
+  .usuario:hover::before {
+    transform: scale(0.9);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
     .usuario {
-        margin-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
     }
     
     .usuario h2.card-title {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
-}
-
-/* Animation for card loading */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.usuario {
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Delay animations for each card */
-.usuario:nth-child(1) { animation-delay: 0.1s; }
-.usuario:nth-child(2) { animation-delay: 0.2s; }
-.usuario:nth-child(3) { animation-delay: 0.3s; }
-.usuario:nth-child(4) { animation-delay: 0.4s; }
-.usuario:nth-child(5) { animation-delay: 0.5s; }
+    
+    .usuario .card-body {
+      padding: 1.5rem;
+    }
+  }
